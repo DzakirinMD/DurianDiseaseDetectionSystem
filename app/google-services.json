@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "385601578860",
+    "firebase_url": "https://duriandiseasedetectionsystem.firebaseio.com",
+    "project_id": "duriandiseasedetectionsystem",
+    "storage_bucket": "duriandiseasedetectionsystem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385601578860:android:b94d694af3054d1015f549",
+        "android_client_info": {
+          "package_name": "com.example.duriandiseasedetectionsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385601578860-ouchcofvdg514b5iqm63ucc92eqq6vt3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.duriandiseasedetectionsystem",
+            "certificate_hash": "1bf24952547ea2f1037ea72fa6716c8baea72739"
+          }
+        },
+        {
+          "client_id": "385601578860-5pulkho01fblmh36l2uq90jj31glthgq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.duriandiseasedetectionsystem",
+            "certificate_hash": "2e7bb73e11b6b570064f02281d5a46d7d1464038"
+          }
+        },
+        {
+          "client_id": "385601578860-qrkl6f30e43dgh459cpc7cusvm8nlure.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrSa7-KaHUIuvc0RrYIIyy7ww0ECrz8DM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385601578860-qrkl6f30e43dgh459cpc7cusvm8nlure.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,364 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:2:1-48:12
+MERGED from [com.google.android.material:material:1.0.0-rc01] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\43d10548910a2686de65fd51b2206c0d\material-1.0.0-rc01\AndroidManifest.xml:17:1-24:12
+MERGED from [com.firebaseui:firebase-ui-database:0.4.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\1ce2d7ba742a97c62f9976a166aa6c85\jetified-firebase-ui-database-0.4.0\AndroidManifest.xml:2:1-13:12
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.5.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\05590192b1016aea2ac1549d628dceff\jetified-android-image-cropper-2.5.1\AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8b7353a4da394401f2770946eabec9bd\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\e88b13ae8ecbb63da81ec85463301b9c\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.firebase:firebase-database:16.0.4] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\23c3a2dc3ea4df9c4852461dd2016d23\jetified-firebase-database-16.0.4\AndroidManifest.xml:15:1-25:12
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\70ea26362a9d66a8fcb32c43e913f178\jetified-circleimageview-2.1.0\AndroidManifest.xml:2:1-11:12
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\4d6f48202ce92817f2ca937ff5ebdb50\tensorflow-lite-0.0.0-nightly\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\908516facc2832c5de1bd9f8e4f02639\play-services-flags-16.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\36570ba6e67fb8e28e95e1cf9ca357cf\jetified-firebase-auth-interop-16.0.1\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\27c09735b0945c6f014f96e75aa02c08\jetified-play-services-base-16.0.1\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\3bfd29eb920115cc836d6c43bf9054fe\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-database-collection:16.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\3c929f0c885367d250e8fbf576aa3f21\firebase-database-collection-16.0.0\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8f4644ff6221969017854bf0d6cb1806\jetified-play-services-basement-16.1.0\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\fc8e660555fcd619975fc3f54e7b6732\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\d9825d76f6bbee29e3578706a3ba71a2\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\ef2b9acfed30db7d42005e1e08b46c79\appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\903628750a551479d07974af9ddb1514\recyclerview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\506ff032f2e3a2422899c5a2a3d9de51\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\6effe2cbf16174b668e3e1d0cfddf644\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0-rc01] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\0c059db1aeb24077fe90c38a8706466e\transition-1.0.0-rc01\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\1428b5f834224b054b3655b7bb9f4141\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\b71106a2dbab772943f41fdb129a6c36\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\a8c2bb309b0f0e205d5df49a5c8f0224\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\ea195e7a4deac63f8932aeb483676170\activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\33f3f4591626067cc73772904b9eb738\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\3e16f019840cc70306750a8dc25d7f2e\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\fa01b882334f7262ea8e3e7268311095\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\0916f73c87a1ba2271fe392cf50cdbd5\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\3c570a0a75f7bdf20ec22b30af040369\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\fc89f4a1c9db1f9f645452bfbb4cd681\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f4af7f1a3c26c4b61981ff2f9af835ae\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\a1079c7fbe6a9a0a1066925b6507eb74\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\478b79604eaaf934858ce3739dce1708\core-1.1.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\a5cc52281db0c619acb263f3ec9583e2\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0-rc01] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\89fa10c7bfc32c91670b27b1caa68637\cardview-1.0.0-rc01\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9c865c57a8ab83eac8e7c02e9f838480\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\6352da2278f4887fa4506d4f94107bca\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\c08fbd2ff03eaf1eb73b66b76b15a082\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\ede779bc2682400490f54d1fd5fcec7d\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\79c1d5c82fe746b1739cbdd05686da02\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\d5c3ac55f54e7be18a5143c57b0a7ada\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\7eeeb2910d1096ef30c55533f294f81f\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8a422b90bfe2308ee62c0eaef9ccdad3\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\b9053f481f6d09d6b0325c41025a2cd9\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\197553ab9f2fbb988661865532230777\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\b0258761e09ba69bc3c7bc9f6c71d3b2\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\ff12cc281f87118c6dbeead31942afb5\print-1.0.0\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:2:1-48:12
+	package
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:3:5-55
+		INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:2:1-48:12
+		INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:2:1-48:12
+		INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:5:5-17
+INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:5:5-17
+INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:5:5-17
+MERGED from [com.google.android.material:material:1.0.0-rc01] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\43d10548910a2686de65fd51b2206c0d\material-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0-rc01] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\43d10548910a2686de65fd51b2206c0d\material-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [com.firebaseui:firebase-ui-database:0.4.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\1ce2d7ba742a97c62f9976a166aa6c85\jetified-firebase-ui-database-0.4.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-database:0.4.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\1ce2d7ba742a97c62f9976a166aa6c85\jetified-firebase-ui-database-0.4.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.5.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\05590192b1016aea2ac1549d628dceff\jetified-android-image-cropper-2.5.1\AndroidManifest.xml:8:5-10:41
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.5.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\05590192b1016aea2ac1549d628dceff\jetified-android-image-cropper-2.5.1\AndroidManifest.xml:8:5-10:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8b7353a4da394401f2770946eabec9bd\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8b7353a4da394401f2770946eabec9bd\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\e88b13ae8ecbb63da81ec85463301b9c\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\e88b13ae8ecbb63da81ec85463301b9c\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-database:16.0.4] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\23c3a2dc3ea4df9c4852461dd2016d23\jetified-firebase-database-16.0.4\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-database:16.0.4] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\23c3a2dc3ea4df9c4852461dd2016d23\jetified-firebase-database-16.0.4\AndroidManifest.xml:18:5-20:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\70ea26362a9d66a8fcb32c43e913f178\jetified-circleimageview-2.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\70ea26362a9d66a8fcb32c43e913f178\jetified-circleimageview-2.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\4d6f48202ce92817f2ca937ff5ebdb50\tensorflow-lite-0.0.0-nightly\AndroidManifest.xml:5:5-6:41
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\4d6f48202ce92817f2ca937ff5ebdb50\tensorflow-lite-0.0.0-nightly\AndroidManifest.xml:5:5-6:41
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\908516facc2832c5de1bd9f8e4f02639\play-services-flags-16.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\908516facc2832c5de1bd9f8e4f02639\play-services-flags-16.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\36570ba6e67fb8e28e95e1cf9ca357cf\jetified-firebase-auth-interop-16.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\36570ba6e67fb8e28e95e1cf9ca357cf\jetified-firebase-auth-interop-16.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\27c09735b0945c6f014f96e75aa02c08\jetified-play-services-base-16.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\27c09735b0945c6f014f96e75aa02c08\jetified-play-services-base-16.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\3bfd29eb920115cc836d6c43bf9054fe\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\3bfd29eb920115cc836d6c43bf9054fe\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:16.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\3c929f0c885367d250e8fbf576aa3f21\firebase-database-collection-16.0.0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database-collection:16.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\3c929f0c885367d250e8fbf576aa3f21\firebase-database-collection-16.0.0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8f4644ff6221969017854bf0d6cb1806\jetified-play-services-basement-16.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8f4644ff6221969017854bf0d6cb1806\jetified-play-services-basement-16.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\fc8e660555fcd619975fc3f54e7b6732\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\fc8e660555fcd619975fc3f54e7b6732\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\d9825d76f6bbee29e3578706a3ba71a2\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\d9825d76f6bbee29e3578706a3ba71a2\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\ef2b9acfed30db7d42005e1e08b46c79\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\ef2b9acfed30db7d42005e1e08b46c79\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\903628750a551479d07974af9ddb1514\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\903628750a551479d07974af9ddb1514\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\506ff032f2e3a2422899c5a2a3d9de51\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\506ff032f2e3a2422899c5a2a3d9de51\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\6effe2cbf16174b668e3e1d0cfddf644\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\6effe2cbf16174b668e3e1d0cfddf644\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0-rc01] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\0c059db1aeb24077fe90c38a8706466e\transition-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0-rc01] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\0c059db1aeb24077fe90c38a8706466e\transition-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\1428b5f834224b054b3655b7bb9f4141\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\1428b5f834224b054b3655b7bb9f4141\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\b71106a2dbab772943f41fdb129a6c36\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\b71106a2dbab772943f41fdb129a6c36\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\a8c2bb309b0f0e205d5df49a5c8f0224\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\a8c2bb309b0f0e205d5df49a5c8f0224\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\ea195e7a4deac63f8932aeb483676170\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\ea195e7a4deac63f8932aeb483676170\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\33f3f4591626067cc73772904b9eb738\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\33f3f4591626067cc73772904b9eb738\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\3e16f019840cc70306750a8dc25d7f2e\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\3e16f019840cc70306750a8dc25d7f2e\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\fa01b882334f7262ea8e3e7268311095\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\fa01b882334f7262ea8e3e7268311095\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\0916f73c87a1ba2271fe392cf50cdbd5\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\0916f73c87a1ba2271fe392cf50cdbd5\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\3c570a0a75f7bdf20ec22b30af040369\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\3c570a0a75f7bdf20ec22b30af040369\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\fc89f4a1c9db1f9f645452bfbb4cd681\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\fc89f4a1c9db1f9f645452bfbb4cd681\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f4af7f1a3c26c4b61981ff2f9af835ae\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f4af7f1a3c26c4b61981ff2f9af835ae\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\a1079c7fbe6a9a0a1066925b6507eb74\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\a1079c7fbe6a9a0a1066925b6507eb74\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\478b79604eaaf934858ce3739dce1708\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\478b79604eaaf934858ce3739dce1708\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\a5cc52281db0c619acb263f3ec9583e2\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\a5cc52281db0c619acb263f3ec9583e2\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0-rc01] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\89fa10c7bfc32c91670b27b1caa68637\cardview-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0-rc01] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\89fa10c7bfc32c91670b27b1caa68637\cardview-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9c865c57a8ab83eac8e7c02e9f838480\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9c865c57a8ab83eac8e7c02e9f838480\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\6352da2278f4887fa4506d4f94107bca\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\6352da2278f4887fa4506d4f94107bca\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\c08fbd2ff03eaf1eb73b66b76b15a082\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\c08fbd2ff03eaf1eb73b66b76b15a082\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\ede779bc2682400490f54d1fd5fcec7d\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\ede779bc2682400490f54d1fd5fcec7d\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\79c1d5c82fe746b1739cbdd05686da02\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\79c1d5c82fe746b1739cbdd05686da02\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\d5c3ac55f54e7be18a5143c57b0a7ada\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\d5c3ac55f54e7be18a5143c57b0a7ada\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\7eeeb2910d1096ef30c55533f294f81f\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\7eeeb2910d1096ef30c55533f294f81f\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8a422b90bfe2308ee62c0eaef9ccdad3\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8a422b90bfe2308ee62c0eaef9ccdad3\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\b9053f481f6d09d6b0325c41025a2cd9\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\b9053f481f6d09d6b0325c41025a2cd9\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\197553ab9f2fbb988661865532230777\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\197553ab9f2fbb988661865532230777\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\b0258761e09ba69bc3c7bc9f6c71d3b2\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\b0258761e09ba69bc3c7bc9f6c71d3b2\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\ff12cc281f87118c6dbeead31942afb5\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\ff12cc281f87118c6dbeead31942afb5\print-1.0.0\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:5:5-17
+INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:5:5-17
+	android:targetSdkVersion
+		INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:5:5-17
+		INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:5:5-17
+		MERGED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:5:5-17
+		INJECTED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:7:5-65
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:7:22-62
+uses-feature#android.hardware.camera
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:9:5-60
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:9:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:10:5-70
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:10:19-67
+application
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:12:5-46:19
+MERGED from [com.google.android.material:material:1.0.0-rc01] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\43d10548910a2686de65fd51b2206c0d\material-1.0.0-rc01\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0-rc01] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\43d10548910a2686de65fd51b2206c0d\material-1.0.0-rc01\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\e88b13ae8ecbb63da81ec85463301b9c\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\e88b13ae8ecbb63da81ec85463301b9c\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:23:5-40:19
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\70ea26362a9d66a8fcb32c43e913f178\jetified-circleimageview-2.1.0\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\70ea26362a9d66a8fcb32c43e913f178\jetified-circleimageview-2.1.0\AndroidManifest.xml:9:5-20
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\4d6f48202ce92817f2ca937ff5ebdb50\tensorflow-lite-0.0.0-nightly\AndroidManifest.xml:8:5-20
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\4d6f48202ce92817f2ca937ff5ebdb50\tensorflow-lite-0.0.0-nightly\AndroidManifest.xml:8:5-20
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\36570ba6e67fb8e28e95e1cf9ca357cf\jetified-firebase-auth-interop-16.0.1\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\36570ba6e67fb8e28e95e1cf9ca357cf\jetified-firebase-auth-interop-16.0.1\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\27c09735b0945c6f014f96e75aa02c08\jetified-play-services-base-16.0.1\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\27c09735b0945c6f014f96e75aa02c08\jetified-play-services-base-16.0.1\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:9:5-15:19
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:9:5-15:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\3bfd29eb920115cc836d6c43bf9054fe\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\3bfd29eb920115cc836d6c43bf9054fe\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8f4644ff6221969017854bf0d6cb1806\jetified-play-services-basement-16.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8f4644ff6221969017854bf0d6cb1806\jetified-play-services-basement-16.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\478b79604eaaf934858ce3739dce1708\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\478b79604eaaf934858ce3739dce1708\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\6352da2278f4887fa4506d4f94107bca\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\6352da2278f4887fa4506d4f94107bca\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\478b79604eaaf934858ce3739dce1708\core-1.1.0\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:17:9-35
+	android:label
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:15:9-41
+	android:roundIcon
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:16:9-54
+	android:icon
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:14:9-43
+	android:allowBackup
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:13:9-35
+	android:theme
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:18:9-40
+activity#com.example.duriandiseasedetectionsystem.Search
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:19:9-53
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:19:19-41
+activity#com.example.duriandiseasedetectionsystem.UserListActivity
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:20:9-54
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:20:19-51
+activity#com.example.duriandiseasedetectionsystem.StaffViewProfile
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:21:9-54
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:21:19-51
+activity#com.example.duriandiseasedetectionsystem.ScanDiseaseActivity
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:22:9-57
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:22:19-54
+activity#com.example.duriandiseasedetectionsystem.LeafActivity
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:23:9-50
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:23:19-47
+activity#com.example.duriandiseasedetectionsystem.ControlMeasuresActivity
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:24:9-61
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:24:19-58
+activity#com.example.duriandiseasedetectionsystem.DiseaseActivity
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:25:9-53
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:25:19-50
+activity#com.example.duriandiseasedetectionsystem.DurianActivity
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:26:9-52
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:26:19-49
+activity#com.example.duriandiseasedetectionsystem.DashboardActivity
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:27:9-55
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:27:19-52
+activity#com.example.duriandiseasedetectionsystem.RegistrationActivity
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:28:9-58
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:28:19-55
+activity#com.example.duriandiseasedetectionsystem.MainActivity
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:29:9-35:20
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:29:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:30:13-34:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:31:17-69
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:31:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:33:17-77
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:33:27-74
+activity#com.example.duriandiseasedetectionsystem.DetectorActivity
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:36:9-45:20
+	android:screenOrientation
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:39:13-49
+	android:label
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:38:13-60
+	android:name
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:37:13-45
+uses-permission#android.permission.INTERNET
+ADDED from [com.firebaseui:firebase-ui-database:0.4.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\1ce2d7ba742a97c62f9976a166aa6c85\jetified-firebase-ui-database-0.4.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-database:16.0.4] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\23c3a2dc3ea4df9c4852461dd2016d23\jetified-firebase-database-16.0.4\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database:16.0.4] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\23c3a2dc3ea4df9c4852461dd2016d23\jetified-firebase-database-16.0.4\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-database:0.4.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\1ce2d7ba742a97c62f9976a166aa6c85\jetified-firebase-ui-database-0.4.0\AndroidManifest.xml:11:22-64
+activity#com.google.firebase.auth.internal.FederatedSignInActivity
+ADDED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:24:9-31:50
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:26:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:28:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:27:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:29:13-102
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:30:13-72
+	tools:replace
+		ADDED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:31:13-47
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:25:13-85
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:33:9-39:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:34:13-84
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:36:13-38:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:38:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:37:17-109
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-database:16.0.4] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\23c3a2dc3ea4df9c4852461dd2016d23\jetified-firebase-database-16.0.4\AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-database:16.0.4] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\23c3a2dc3ea4df9c4852461dd2016d23\jetified-firebase-database-16.0.4\AndroidManifest.xml:22:22-76
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\27c09735b0945c6f014f96e75aa02c08\jetified-play-services-base-16.0.1\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\27c09735b0945c6f014f96e75aa02c08\jetified-play-services-base-16.0.1\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\27c09735b0945c6f014f96e75aa02c08\jetified-play-services-base-16.0.1\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\27c09735b0945c6f014f96e75aa02c08\jetified-play-services-base-16.0.1\AndroidManifest.xml:24:13-79
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:10:9-14:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:12:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:13:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:14:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:11:13-77
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8f4644ff6221969017854bf0d6cb1806\jetified-play-services-basement-16.1.0\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8f4644ff6221969017854bf0d6cb1806\jetified-play-services-basement-16.1.0\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8f4644ff6221969017854bf0d6cb1806\jetified-play-services-basement-16.1.0\AndroidManifest.xml:24:13-58

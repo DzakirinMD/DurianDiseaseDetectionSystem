@@ -1,0 +1,170 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.duriandiseasedetectionsystem"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+7-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:5:5-17
+8        android:minSdkVersion="23"
+8-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:5:5-17
+9        android:targetSdkVersion="29" />
+9-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:5:5-17
+10
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:7:5-65
+11-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:7:22-62
+12
+13    <uses-feature android:name="android.hardware.camera" />
+13-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:9:5-60
+13-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:9:19-57
+14    <uses-feature android:name="android.hardware.camera.autofocus" />
+14-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:10:5-70
+14-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:10:19-67
+15
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->[com.firebaseui:firebase-ui-database:0.4.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\1ce2d7ba742a97c62f9976a166aa6c85\jetified-firebase-ui-database-0.4.0\AndroidManifest.xml:11:5-67
+16-->[com.firebaseui:firebase-ui-database:0.4.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\1ce2d7ba742a97c62f9976a166aa6c85\jetified-firebase-ui-database-0.4.0\AndroidManifest.xml:11:22-64
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->[com.google.firebase:firebase-database:16.0.4] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\23c3a2dc3ea4df9c4852461dd2016d23\jetified-firebase-database-16.0.4\AndroidManifest.xml:22:5-79
+17-->[com.google.firebase:firebase-database:16.0.4] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\23c3a2dc3ea4df9c4852461dd2016d23\jetified-firebase-database-16.0.4\AndroidManifest.xml:22:22-76
+18
+19    <application
+19-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:12:5-46:19
+20        android:allowBackup="true"
+20-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:13:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\478b79604eaaf934858ce3739dce1708\core-1.1.0\AndroidManifest.xml:24:18-86
+22        android:debuggable="true"
+23        android:icon="@mipmap/ic_launcher"
+23-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:14:9-43
+24        android:label="@string/app_name"
+24-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:15:9-41
+25        android:roundIcon="@mipmap/ic_launcher_round"
+25-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:16:9-54
+26        android:supportsRtl="true"
+26-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:17:9-35
+27        android:testOnly="true"
+28        android:theme="@style/AppTheme" >
+28-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:18:9-40
+29        <activity android:name="com.example.duriandiseasedetectionsystem.Search" />
+29-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:19:9-53
+29-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:19:19-41
+30        <activity android:name="com.example.duriandiseasedetectionsystem.UserListActivity" />
+30-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:20:9-54
+30-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:20:19-51
+31        <activity android:name="com.example.duriandiseasedetectionsystem.StaffViewProfile" />
+31-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:21:9-54
+31-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:21:19-51
+32        <activity android:name="com.example.duriandiseasedetectionsystem.ScanDiseaseActivity" />
+32-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:22:9-57
+32-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:22:19-54
+33        <activity android:name="com.example.duriandiseasedetectionsystem.LeafActivity" />
+33-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:23:9-50
+33-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:23:19-47
+34        <activity android:name="com.example.duriandiseasedetectionsystem.ControlMeasuresActivity" />
+34-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:24:9-61
+34-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:24:19-58
+35        <activity android:name="com.example.duriandiseasedetectionsystem.DiseaseActivity" />
+35-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:25:9-53
+35-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:25:19-50
+36        <activity android:name="com.example.duriandiseasedetectionsystem.DurianActivity" />
+36-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:26:9-52
+36-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:26:19-49
+37        <activity android:name="com.example.duriandiseasedetectionsystem.DashboardActivity" />
+37-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:27:9-55
+37-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:27:19-52
+38        <activity android:name="com.example.duriandiseasedetectionsystem.RegistrationActivity" />
+38-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:28:9-58
+38-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:28:19-55
+39        <activity android:name="com.example.duriandiseasedetectionsystem.MainActivity" >
+39-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:29:9-35:20
+39-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:29:19-47
+40            <intent-filter>
+40-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:30:13-34:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:31:17-69
+41-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:31:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:33:17-77
+43-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:33:27-74
+44            </intent-filter>
+45        </activity>
+46        <activity
+46-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:36:9-45:20
+47            android:name="com.example.duriandiseasedetectionsystem.DetectorActivity"
+47-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:37:13-45
+48            android:label="@string/activity_name_detection"
+48-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:38:13-60
+49            android:screenOrientation="portrait" >
+49-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:39:13-49
+50            <intent-filter>
+50-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:30:13-34:29
+51                <action android:name="android.intent.action.MAIN" />
+51-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:31:17-69
+51-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:31:25-66
+52
+53                <category android:name="android.intent.category.LAUNCHER" />
+53-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:33:17-77
+53-->C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:33:27-74
+54            </intent-filter>
+55        </activity>
+56        <activity
+56-->[com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:24:9-31:50
+57            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+57-->[com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:25:13-85
+58            android:excludeFromRecents="true"
+58-->[com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:26:13-46
+59            android:exported="true"
+59-->[com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:27:13-36
+60            android:launchMode="singleTask"
+60-->[com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:28:13-44
+61            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+61-->[com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:29:13-102
+62            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+62-->[com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:30:13-72
+63
+64        <service
+64-->[com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:33:9-39:19
+65            android:name="com.google.firebase.components.ComponentDiscoveryService"
+65-->[com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:34:13-84
+66            android:exported="false" >
+66-->[com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:35:13-37
+67            <meta-data
+67-->[com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:36:13-38:85
+68                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+68-->[com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:37:17-109
+69                android:value="com.google.firebase.components.ComponentRegistrar" />
+69-->[com.google.firebase:firebase-auth:16.0.5] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\f6d623de66660bbfcdb3b0ae6a8b7159\jetified-firebase-auth-16.0.5\AndroidManifest.xml:38:17-82
+70        </service>
+71
+72        <activity
+72-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\27c09735b0945c6f014f96e75aa02c08\jetified-play-services-base-16.0.1\AndroidManifest.xml:23:9-26:75
+73            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+73-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\27c09735b0945c6f014f96e75aa02c08\jetified-play-services-base-16.0.1\AndroidManifest.xml:24:13-79
+74            android:exported="false"
+74-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\27c09735b0945c6f014f96e75aa02c08\jetified-play-services-base-16.0.1\AndroidManifest.xml:25:13-37
+75            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+75-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\27c09735b0945c6f014f96e75aa02c08\jetified-play-services-base-16.0.1\AndroidManifest.xml:26:13-72
+76
+77        <provider
+77-->[com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:10:9-14:39
+78            android:name="com.google.firebase.provider.FirebaseInitProvider"
+78-->[com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:11:13-77
+79            android:authorities="com.example.duriandiseasedetectionsystem.firebaseinitprovider"
+79-->[com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:12:13-72
+80            android:exported="false"
+80-->[com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:13:13-37
+81            android:initOrder="100" />
+81-->[com.google.firebase:firebase-common:16.0.3] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\9170403ef94b7f7ebf9685ef951258bc\jetified-firebase-common-16.0.3\AndroidManifest.xml:14:13-36
+82
+83        <meta-data
+83-->[com.google.android.gms:play-services-basement:16.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8f4644ff6221969017854bf0d6cb1806\jetified-play-services-basement-16.1.0\AndroidManifest.xml:23:9-25:69
+84            android:name="com.google.android.gms.version"
+84-->[com.google.android.gms:play-services-basement:16.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8f4644ff6221969017854bf0d6cb1806\jetified-play-services-basement-16.1.0\AndroidManifest.xml:24:13-58
+85            android:value="@integer/google_play_services_version" />
+85-->[com.google.android.gms:play-services-basement:16.1.0] C:\Users\kirin\.gradle\caches\transforms-2\files-2.1\8f4644ff6221969017854bf0d6cb1806\jetified-play-services-basement-16.1.0\AndroidManifest.xml:25:13-66
+86    </application>
+87
+88</manifest>
