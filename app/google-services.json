@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "385601578860-sd1mau44lkg5qi2ib7gq2ig4eje8h26a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.duriandiseasedetectionsystem",
+            "certificate_hash": "44cee3a16be957905b46008133639751057200f0"
+          }
+        },
+        {
           "client_id": "385601578860-ouchcofvdg514b5iqm63ucc92eqq6vt3.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

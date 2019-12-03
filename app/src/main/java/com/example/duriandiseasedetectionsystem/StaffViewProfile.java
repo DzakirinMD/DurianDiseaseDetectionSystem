@@ -144,6 +144,8 @@ public class StaffViewProfile extends AppCompatActivity {
                             Staff staff = dataSnapshot.getValue(Staff.class);
 
                             final String pName = staff.getStaffName();
+                            final String amImageUrl = staff.getImgurl();
+
                                btnUpdateUp.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -166,7 +168,7 @@ public class StaffViewProfile extends AppCompatActivity {
                                     System.out.println("Current password is : " + passCurrent);
 
                                     //Call model constructor
-                                    Staff data = new Staff(uID,pName,add,notel,email,pass);
+                                    Staff data = new Staff(uID,pName,add,notel,email,pass,amImageUrl);
 
                                     //masuk kan value dalam id tu (position dy)
                                     mProfileRefUpdate.child(uID).setValue(data);

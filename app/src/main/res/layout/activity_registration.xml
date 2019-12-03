@@ -27,6 +27,18 @@
                 android:gravity="center"
                 />
 
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilePic"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/default_user"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp"
+                tools:layout_editor_absoluteX="142dp"
+                tools:layout_editor_absoluteY="16dp" />
+
             <EditText
                 android:id="@+id/email_registration"
                 android:layout_width="match_parent"
@@ -105,4 +117,9 @@
 
         </LinearLayout>
     </ScrollView>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

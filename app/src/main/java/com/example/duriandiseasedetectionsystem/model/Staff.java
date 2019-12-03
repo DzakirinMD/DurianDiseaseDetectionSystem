@@ -8,18 +8,20 @@ public class Staff {
     private String staffNoTel;
     private String staffEmail;
     private String staffPassword;
+    private String imgurl;
 
     public Staff(){
 
     }
 
-    public Staff(String staffID, String staffName, String staffAddress, String staffNoTel, String staffEmail, String staffPassword) {
+    public Staff(String staffID, String staffName, String staffAddress, String staffNoTel, String staffEmail, String staffPassword, String imgurl) {
         this.staffID = staffID;
         this.staffName = staffName;
         this.staffAddress = staffAddress;
         this.staffNoTel = staffNoTel;
         this.staffEmail = staffEmail;
         this.staffPassword = staffPassword;
+        this.imgurl = imgurl;
     }
 
     public String getStaffID() {
@@ -68,5 +70,13 @@ public class Staff {
 
     public void setStaffPassword(String staffPassword) {
         this.staffPassword = staffPassword;
+    }
+
+    public String getImgurl() {
+        return imgurl;
+    }
+
+    public void setImgurl(String imgurl) {
+        this.imgurl = imgurl;
     }
 }

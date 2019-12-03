@@ -1417,9 +1417,11 @@ id password_registration
 id percent
 id pin
 id plus
+id profilePic
 id profiledashPic
 id profiledashimg
 id profiledashtxt
+id progress_bar
 id progress_circular
 id progress_horizontal
 id radio
