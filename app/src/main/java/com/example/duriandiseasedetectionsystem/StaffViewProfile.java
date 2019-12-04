@@ -3,6 +3,7 @@ package com.example.duriandiseasedetectionsystem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Context;
 import android.content.Intent;
@@ -26,6 +27,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -40,7 +42,7 @@ public class StaffViewProfile extends AppCompatActivity {
     private Context context;
 
     //Update input field...
-    private EditText updateSEmail;
+    private TextView updateSEmail;
     private EditText updateSPass;
     private EditText updateSNotel;
     private EditText updateSAdd;
@@ -77,9 +79,12 @@ public class StaffViewProfile extends AppCompatActivity {
         mstaffName = findViewById(R.id.pName);
         mstaffNoTel = findViewById(R.id.pPhone);
         mstaffAddress = findViewById(R.id.pAddress);
-        profilePic = findViewById(R.id.profiledashPic);
+        profilePic = findViewById(R.id.profilePicProfile);
 
         mEditButton = findViewById(R.id.updateBtn);
+
+        //Call View Profile Method
+        ViewProfile();
 
         //Inflate updatedeleteinputfield_staff
         mEditButton.setOnClickListener(new View.OnClickListener() {
@@ -126,6 +131,8 @@ public class StaffViewProfile extends AppCompatActivity {
 
                 //collect data from field of updatedeleteinputfield
                 updateSEmail = myview.findViewById(R.id.upd_staff_email);
+                //for email Read only
+                updateSEmail.setEnabled(false);
                 updateSPass = myview.findViewById(R.id.upd_staff_pass);
                 updateSNotel = myview.findViewById(R.id.upd_staff_notel);
                 updateSAdd = myview.findViewById(R.id.upd_staff_address);
@@ -272,4 +279,31 @@ public class StaffViewProfile extends AppCompatActivity {
         });
 
     }
+
+    private void ViewProfile() {
+
+            mProfileRef.child("Staff").child(mAuth.getUid()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                    if (dataSnapshot.hasChildren()){
+
+                        Staff staff = dataSnapshot.getValue(Staff.class);
+
+                        mImageUrl = staff.getImgurl();
+
+                        System.out.println("Image uri " + mImageUrl);
+
+                        if(mImageUrl != null){
+                            Picasso.with(getApplicationContext()).load(mImageUrl).into(profilePic);
+                        }
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                }
+            });
+    }
+
 }

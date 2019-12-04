@@ -6,6 +6,7 @@
     <color name="greenwhite">#C6DDC8</color>
     <color name="white">#FFFFFF</color>
     <color name="startblue">#09c6df</color>
+    <color name="black">#020101</color>
 
     <color name="semi_transparent">#66000000</color>
 </resources>

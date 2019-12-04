@@ -22,17 +22,21 @@
             <include layout="@layout/toolbar"
                 android:id="@+id/toolbar_home"/>
 
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilePicDash"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/default_user"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp"
+                tools:layout_editor_absoluteX="142dp"
+                tools:layout_editor_absoluteY="16dp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"/>
-
-            <ImageView
-                android:id="@+id/profiledashimg"
-                android:layout_width="379dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center"
-                android:clickable="true"
-                app:srcCompat="@drawable/profile" />
+                android:layout_height="20dp"/>
 
             <TextView
                 android:id="@+id/profiledashtxt"

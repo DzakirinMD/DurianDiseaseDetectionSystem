@@ -661,6 +661,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1247,6 +1248,7 @@ id add_cm_name
 id add_disease_name
 id add_disease_symptoms
 id add_durian_characteristic
+id add_durian_img
 id add_durian_name
 id add_durian_species
 id add_leaf_characteristic
@@ -1320,6 +1322,7 @@ id direct
 id disableHome
 id diseasedashboardimg
 id diseasedashboardtxt
+id durian_view
 id duriandashimg
 id duriandashtxt
 id edit_query
@@ -1418,8 +1421,8 @@ id percent
 id pin
 id plus
 id profilePic
-id profiledashPic
-id profiledashimg
+id profilePicDash
+id profilePicProfile
 id profiledashtxt
 id progress_bar
 id progress_circular
@@ -1537,6 +1540,7 @@ id upd_cm_name
 id upd_disease_name
 id upd_disease_symptoms
 id upd_durian_characteristic
+id upd_durian_img
 id upd_durian_name
 id upd_durian_species
 id upd_leaf_characteristic
