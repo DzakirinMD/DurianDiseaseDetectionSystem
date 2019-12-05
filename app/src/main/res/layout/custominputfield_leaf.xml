@@ -26,84 +26,13 @@
                 android:textColor="@android:color/black"
                 android:layout_height="wrap_content"/>
 
-            <!--Line pertama-->
-            <LinearLayout
+            <ImageView
+                android:id="@+id/add_leaf_img"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="200dp" />
 
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Name:"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:layout_margin="10dp"
-                        />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:id="@+id/add_leaf_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:textColor="@android:color/black" />
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <!--Line Kedua-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Durian:"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:layout_margin="10dp"
-                        />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="wrap_content">
-
-                    <Spinner
-                        android:id="@+id/spinnerLeaf"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_centerInParent="true"></Spinner>
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <!--Line Ketiga-->
+            <!--Line Pertama-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -141,45 +70,6 @@
 
             </LinearLayout>
 
-            <!--Line 4-->
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Leaf Image:"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                        android:layout_margin="10dp"
-                        />
-
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        tools:srcCompat="@drawable/leaf" />
-
-
-                </RelativeLayout>
-
-            </LinearLayout>
 
             <Button
                 android:id="@+id/btn_save"

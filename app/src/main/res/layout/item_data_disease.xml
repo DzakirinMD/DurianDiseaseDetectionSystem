@@ -10,31 +10,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <TextView
+            <ImageView
+                android:id="@+id/leaf_img_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Gambar Disease"
-                android:padding="12dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="#840CEE"
-                android:id="@+id/date"/>
+                android:layout_height="200dp"/>
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_weight="3"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/name"
+                android:id="@+id/leaf_name_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Name"
@@ -42,22 +38,12 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black" />
 
-            <TextView
-                android:id="@+id/severity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/name"
-                android:text="Severity"
-                android:maxLines="2"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:padding="5dp"
-                android:textColor="@android:color/black"/>
 
             <TextView
-                android:id="@+id/symptoms"
+                android:id="@+id/leaf_symptoms_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/severity"
+                android:layout_below="@+id/leaf_name_view"
                 android:text="Symptoms"
                 android:maxLines="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"

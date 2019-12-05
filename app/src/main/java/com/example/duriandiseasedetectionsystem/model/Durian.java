@@ -2,64 +2,64 @@ package com.example.duriandiseasedetectionsystem.model;
 
 public class Durian {
 
-    private String dId;
-    private String dName;
-    private String dSpecies;
-    private String dImage;
-    private String dCharacteristic;
+    private String durianID;
+    private String durianName;
+    private String durianSpecies;
+    private String durianImage;
+    private String durianCharacteristic;
     private String farmerId;
 
     public Durian () {
 
     }
 
-    public Durian(String dId, String dName, String dSpecies, String dImage, String dCharacteristic, String farmerId) {
-        this.dId = dId;
-        this.dName = dName;
-        this.dSpecies = dSpecies;
-        this.dImage = dImage;
-        this.dCharacteristic = dCharacteristic;
+    public Durian(String durianID, String durianName, String durianSpecies, String durianImage, String durianCharacteristic, String farmerId) {
+        this.durianID = durianID;
+        this.durianName = durianName;
+        this.durianSpecies = durianSpecies;
+        this.durianImage = durianImage;
+        this.durianCharacteristic = durianCharacteristic;
         this.farmerId = farmerId;
     }
 
-    public String getdId() {
-        return dId;
+    public String getdurianID() {
+        return durianID;
     }
 
-    public void setdId(String dId) {
-        this.dId = dId;
+    public void setdurianID(String durianID) {
+        this.durianID = durianID;
     }
 
-    public String getdName() {
-        return dName;
+    public String getdurianName() {
+        return durianName;
     }
 
-    public void setdName(String dName) {
-        this.dName = dName;
+    public void setdurianName(String durianName) {
+        this.durianName = durianName;
     }
 
-    public String getdSpecies() {
-        return dSpecies;
+    public String getdurianSpecies() {
+        return durianSpecies;
     }
 
-    public void setdSpecies(String dSpecies) {
-        this.dSpecies = dSpecies;
+    public void setdurianSpecies(String durianSpecies) {
+        this.durianSpecies = durianSpecies;
     }
 
-    public String getdCharacteristic() {
-        return dCharacteristic;
+    public String getdurianCharacteristic() {
+        return durianCharacteristic;
     }
 
-    public void setdCharacteristic(String dCharacteristic) {
-        this.dCharacteristic = dCharacteristic;
+    public void setdurianCharacteristic(String durianCharacteristic) {
+        this.durianCharacteristic = durianCharacteristic;
     }
 
-    public String getdImage() {
-        return dImage;
+    public String getdurianImage() {
+        return durianImage;
     }
 
-    public void setdImage(String dImage) {
-        this.dImage = dImage;
+    public void setdurianImage(String durianImage) {
+        this.durianImage = durianImage;
     }
 
     public String getFarmerId() {

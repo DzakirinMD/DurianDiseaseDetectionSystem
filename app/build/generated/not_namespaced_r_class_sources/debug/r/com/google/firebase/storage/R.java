@@ -138,8 +138,8 @@ public final class R {
         public static final int icon = 0x7f0800ad;
         public static final int icon_group = 0x7f0800ae;
         public static final int icon_only = 0x7f0800af;
-        public static final int info = 0x7f0800b6;
-        public static final int italic = 0x7f0800b8;
+        public static final int info = 0x7f0800b5;
+        public static final int italic = 0x7f0800b7;
         public static final int light = 0x7f0800c0;
         public static final int line1 = 0x7f0800c1;
         public static final int line3 = 0x7f0800c2;
@@ -151,13 +151,13 @@ public final class R {
         public static final int notification_main_column_container = 0x7f0800db;
         public static final int right_icon = 0x7f0800fe;
         public static final int right_side = 0x7f0800ff;
-        public static final int standard = 0x7f080133;
-        public static final int status_bar_latest_event_content = 0x7f080135;
-        public static final int text = 0x7f080143;
-        public static final int text2 = 0x7f080144;
-        public static final int time = 0x7f080150;
-        public static final int title = 0x7f080151;
-        public static final int wide = 0x7f080177;
+        public static final int standard = 0x7f080131;
+        public static final int status_bar_latest_event_content = 0x7f080133;
+        public static final int text = 0x7f080141;
+        public static final int text2 = 0x7f080142;
+        public static final int time = 0x7f08014e;
+        public static final int title = 0x7f08014f;
+        public static final int wide = 0x7f080175;
     }
     public static final class integer {
         private integer() {}

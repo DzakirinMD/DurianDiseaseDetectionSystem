@@ -61,7 +61,7 @@ public class DurianActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
 
     //Update input field...
-    private EditText updateDName;
+    private EditText updatedurianName;
     private EditText updateDSpc;
     private EditText updateDChr;
     private ImageView updateDImg;
@@ -69,7 +69,7 @@ public class DurianActivity extends AppCompatActivity {
     private Button btnUpdateUp;
 
     //Variable
-    private String dId;
+    private String durianID;
     private String name;
     private String species;
     private String dImgUri;
@@ -78,7 +78,7 @@ public class DurianActivity extends AppCompatActivity {
 
     //uri to point to image and upload to firebase
     private Uri mImageUri, CropImageUri;
-    private ImageView addDImage;
+    private ImageView adddurianImage;
     private static int PICK_IMAGE_REQUEST = 1;
 
 
@@ -147,13 +147,13 @@ public class DurianActivity extends AppCompatActivity {
                 final AlertDialog dialog = myDialog.create();
 
                 //panggil data dari xml alert dialog tu. ni untuk INSERT
-                addDImage = myview.findViewById(R.id.add_durian_img);
-                final EditText addDName = myview.findViewById(R.id.add_durian_name);
+                adddurianImage = myview.findViewById(R.id.add_durian_img);
+                final EditText adddurianName = myview.findViewById(R.id.add_durian_name);
                 final EditText addDSpc = myview.findViewById(R.id.add_durian_species);
                 final EditText addDChr = myview.findViewById(R.id.add_durian_characteristic);
 
                 //choose image from phone
-                addDImage.setOnClickListener(new View.OnClickListener() {
+                adddurianImage.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         PICK_IMAGE_REQUEST = 1;
@@ -171,7 +171,7 @@ public class DurianActivity extends AppCompatActivity {
                 btnSave.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String dName = addDName.getText().toString().trim();
+                        String durianName = adddurianName.getText().toString().trim();
                         String dSpec = addDSpc.getText().toString().trim();
                         String dChar = addDChr.getText().toString().trim();
 
@@ -182,8 +182,8 @@ public class DurianActivity extends AppCompatActivity {
                         String userID = user.getUid();
 
                         // Error Checking
-                        if (TextUtils.isEmpty(dName)){
-                            addDName.setError("Name is required..");
+                        if (TextUtils.isEmpty(durianName)){
+                            adddurianName.setError("Name is required..");
                             return;
                         }
 
@@ -198,11 +198,11 @@ public class DurianActivity extends AppCompatActivity {
                         }
 
                         //create randomkey untuk id
-                        String dID = mDatabase.push().getKey();
+                        String durianID = mDatabase.push().getKey();
 
                         //get user Image
-                        if (CropImageUri != null) {
-                            final StorageReference ref = mStorageRef.child("images/" + dID + "." + getFileExtension(mImageUri));
+                        if (mImageUri != null) {
+                            final StorageReference ref = mStorageRef.child("images/" + durianID + "." + getFileExtension(mImageUri));
                             ref.putFile(mImageUri)
                                     // Inside OnSuccess this to create data
                                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -214,12 +214,12 @@ public class DurianActivity extends AppCompatActivity {
                                                     Uri downloadUrl = uri;
 
                                                     //Put user id into FarmerID and push all info into db
-                                                    Durian data = new Durian(dID, dName, dSpec, downloadUrl.toString(), dChar, uID);
-                                                    mDatabase.child(dID).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                    Durian data = new Durian(durianID, durianName, dSpec, downloadUrl.toString(), dChar, uID);
+                                                    mDatabase.child(durianID).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
                                                         @Override
                                                         public void onComplete(@NonNull Task<Void> task) {
                                                             if (task.isSuccessful()) {
-                                                                Toast.makeText(getApplicationContext(), "Successfuly Added", Toast.LENGTH_SHORT).show();
+                                                                Toast.makeText(getApplicationContext(), "Successfully Added", Toast.LENGTH_SHORT).show();
                                                                 dialog.dismiss();
                                                             } else {
                                                                 Toast.makeText(DurianActivity.this, " Failed.", Toast.LENGTH_SHORT).show();
@@ -234,7 +234,7 @@ public class DurianActivity extends AppCompatActivity {
                                     .addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(getApplicationContext(),"Failed to load Image", Toast.LENGTH_LONG).show();
                                             dialog.dismiss();
                                         }
                                     });
@@ -265,20 +265,7 @@ public class DurianActivity extends AppCompatActivity {
 
                     mImageUri = data.getData();//get image data
 
-                    //Crop Image ni kena declare kat AndroidManifest.xml under application
-                    CropImage.activity(mImageUri)//crop image based on preferences
-                            .setGuidelines(CropImageView.Guidelines.ON)
-                            .setAspectRatio(1, 1)
-                            .start(this);
-                }
-                if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE && data != null) {
-                    CropImage.ActivityResult result = CropImage.getActivityResult(data);
-
-                    CropImageUri = result.getUri();//to get url of image
-
-                    if (resultCode == RESULT_OK) {
-                        Picasso.with(getApplicationContext()).load(CropImageUri).into(addDImage);
-                    }
+                    Picasso.with(this).load(mImageUri).into(adddurianImage);
                 }
                 break;
             case 2:
@@ -316,10 +303,10 @@ public class DurianActivity extends AppCompatActivity {
             protected void populateViewHolder(MyViewHolder viewHolder, final Durian model, final int position) {
 
                 //Your Method to load Data
-                viewHolder.setdName(model.getdName());
-                viewHolder.setdSpecies(model.getdSpecies());
-                viewHolder.setDurianImage(model.getdImage());
-                viewHolder.setdCharacteristic(model.getdCharacteristic());
+                viewHolder.setdurianName(model.getdurianName());
+                viewHolder.setdurianSpecies(model.getdurianSpecies());
+                viewHolder.setDurianImage(model.getdurianImage());
+                viewHolder.setdurianCharacteristic(model.getdurianCharacteristic());
 
 
                 // Setting bila click kat card2 recycler view tu nk jadi apa
@@ -330,11 +317,11 @@ public class DurianActivity extends AppCompatActivity {
                         //post_key untuk dapatkan integer position (kita click tu kat mana) so xyah amik id sbb id x update pon
                         post_key = getRef(position).getKey(); //post_key ni = id
 
-                        dId = model.getdId();
-                        name = model.getdName();
-                        species = model.getdSpecies();
-                        dImgUri = model.getdImage();
-                        characteristic = model.getdCharacteristic();
+                        durianID = model.getdurianID();
+                        name = model.getdurianName();
+                        species = model.getdurianSpecies();
+                        dImgUri = model.getdurianImage();
+                        characteristic = model.getdurianCharacteristic();
 
                         //call update dan delete data kt recyler view
                         updateDeleteData();
@@ -360,7 +347,7 @@ public class DurianActivity extends AppCompatActivity {
         }
 
         //Semua R.id. bawah ni ambik dari item_data.xml
-        public void setdName(String name){
+        public void setdurianName(String name){
             TextView mName = myview.findViewById(R.id.name);
             //nak tukar texview kepada value dari database
             mName.setText(name);
@@ -373,12 +360,12 @@ public class DurianActivity extends AppCompatActivity {
             Picasso.with(context).load(name).into(imageView);
         }
 
-        public void setdSpecies(String species){
+        public void setdurianSpecies(String species){
             TextView mSpecies = myview.findViewById(R.id.species);
             mSpecies.setText(species);
         }
 
-        public void setdCharacteristic(String characteristic){
+        public void setdurianCharacteristic(String characteristic){
             TextView mChar = myview.findViewById(R.id.characteristic);
             mChar.setText(characteristic);
         }
@@ -398,13 +385,13 @@ public class DurianActivity extends AppCompatActivity {
 
         //collect data from field of updatedeleteinputfield
         updateDImg = myview.findViewById(R.id.upd_durian_img);
-        updateDName = myview.findViewById(R.id.upd_durian_name);
+        updatedurianName = myview.findViewById(R.id.upd_durian_name);
         updateDSpc = myview.findViewById(R.id.upd_durian_species);
         updateDChr = myview.findViewById(R.id.upd_durian_characteristic);
 
         //ni untuk ambik apa yg ada kt recycler(item_data.xml) tu untuk letak kat dialog update
-        updateDName.setText(name);
-        updateDName.setSelection(name.length());
+        updatedurianName.setText(name);
+        updatedurianName.setSelection(name.length());
 
         Picasso.with(getApplicationContext()).load(dImgUri).into(updateDImg);
 
@@ -436,7 +423,7 @@ public class DurianActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 //variable ni dari global variable
-                name = updateDName.getText().toString().trim();
+                name = updatedurianName.getText().toString().trim();
                 species = updateDSpc.getText().toString().trim();
                 characteristic = updateDChr.getText().toString().trim();
 
@@ -447,7 +434,7 @@ public class DurianActivity extends AppCompatActivity {
 
                 //get user Image
                 if (mImageUri != null) {
-                    final StorageReference ref = mStorageRef.child("images/" + dId + "." + getFileExtension(mImageUri));
+                    final StorageReference ref = mStorageRef.child("images/" + durianID + "." + getFileExtension(mImageUri));
                     ref.putFile(mImageUri)
                             // Inside OnSuccess this to create data
                             .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {

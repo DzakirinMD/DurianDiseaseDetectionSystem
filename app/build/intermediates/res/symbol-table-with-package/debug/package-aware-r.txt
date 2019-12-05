@@ -1252,7 +1252,7 @@ id add_durian_img
 id add_durian_name
 id add_durian_species
 id add_leaf_characteristic
-id add_leaf_name
+id add_leaf_img
 id address_registration
 id adjust_height
 id adjust_width
@@ -1359,7 +1359,6 @@ id icon_only
 id ifRoom
 id image
 id imageView
-id imageView2
 id inference
 id inference_info
 id info
@@ -1368,9 +1367,10 @@ id italic
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
+id leaf_characteristic_view
+id leaf_img_view
 id leafdashimg
 id leafdashtxt
-id leafdurian
 id left
 id light
 id line1
@@ -1473,8 +1473,6 @@ id snap
 id snapMargins
 id spacer
 id species
-id spinnerLeaf
-id spinnerLeafUpdate
 id split_action_bar
 id spread
 id spread_inside
@@ -1544,12 +1542,12 @@ id upd_durian_img
 id upd_durian_name
 id upd_durian_species
 id upd_leaf_characteristic
-id upd_leaf_name
 id upd_staff_address
 id upd_staff_email
 id upd_staff_notel
 id upd_staff_pass
 id updateBtn
+id update_leaf_img
 id updseekBarDiseaseSeverity
 id useLogo
 id user_list_btn
