@@ -7,7 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f8d03a8-849e-4466-9d7a-64c56d08e3a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/CustomOnItemSelectedListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerDashboardActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerViewProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Farmer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_dashboard.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_view_profile.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -15,35 +19,68 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/duriandiseasedetectionsystem/model/Leaf.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/duriandiseasedetectionsystem/model/Leaf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_custominputfield_disease.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_custominputfield_disease.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_item_data_disease.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_item_data_disease.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_updatedeleteinputfield_disease.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_updatedeleteinputfield_disease.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DiseaseActivity$1$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DiseaseActivity$1$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DiseaseActivity$2$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DiseaseActivity$2$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DiseaseActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DiseaseActivity$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DiseaseActivity$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DiseaseActivity$3.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/duriandiseasedetectionsystem/StaffViewProfile$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/duriandiseasedetectionsystem/StaffViewProfile$1$2$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/duriandiseasedetectionsystem/StaffViewProfile$1$2$1$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/duriandiseasedetectionsystem/StaffViewProfile$1$2$1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/duriandiseasedetectionsystem/StaffViewProfile$1$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/duriandiseasedetectionsystem/StaffViewProfile$1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/duriandiseasedetectionsystem/StaffViewProfile$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/duriandiseasedetectionsystem/StaffViewProfile$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/duriandiseasedetectionsystem/StaffViewProfile$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/duriandiseasedetectionsystem/StaffViewProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debugAndroidTest/manifest-merger-blame-debug-androidTest-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debugAndroidTest/manifest-merger-blame-debug-androidTest-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_updatedeleteinputfield_staff.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity$1$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity$1$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity$4.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$10.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$10.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$11.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$11.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$12.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$12.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$13.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$13.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$14.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$14.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$3.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$4.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$5.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$5.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$6.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$6.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$7.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$7.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$8.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$8.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$9.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DashboardActivity$9.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DiseaseActivity$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DiseaseActivity$4.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/LeafActivity$2$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/LeafActivity$2$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/LeafActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/LeafActivity$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/model/Disease.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/model/Disease.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/model/Leaf.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/model/Leaf.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DurianActivity$1$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/DurianActivity$1$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/LeafActivity$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/LeafActivity$4.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$3.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$4.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$5.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$5.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$6.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$6.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$7$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$7$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$7$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$7$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$7.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/RegistrationActivity$7.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/StaffViewProfile$1$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/StaffViewProfile$1$2$1$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/StaffViewProfile$1$2$1$2$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/StaffViewProfile$1$2$1$2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/StaffViewProfile$1$2$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/StaffViewProfile$1$2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/StaffViewProfile$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/StaffViewProfile$2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/StaffViewProfile$3.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/example/duriandiseasedetectionsystem/StaffViewProfile.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DashboardActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DashboardActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DiseaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DiseaseActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DurianActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DurianActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/LeafActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/LeafActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/ControlMeasures.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/ControlMeasures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Disease.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Disease.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Leaf.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Leaf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/custominputfield_control_measures.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custominputfield_control_measures.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/custominputfield_disease.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custominputfield_disease.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_data.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_data_control_measures.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_data_control_measures.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_data_disease.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_data_disease.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_control_measures.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_control_measures.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_disease.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_disease.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/RegistrationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/RegistrationActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/StaffViewProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/StaffViewProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_staff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_farmer.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,20 +101,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/LeafActivity.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="439" column="81" selection-start-line="439" selection-start-column="81" selection-end-line="439" selection-end-column="81" />
+            <state relative-caret-position="642">
+              <caret line="132" column="39" lean-forward="true" selection-start-line="132" selection-start-column="39" selection-end-line="132" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DiseaseActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/RegistrationActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-791">
-              <caret line="380" column="71" lean-forward="true" selection-start-line="380" selection-start-column="71" selection-end-line="380" selection-end-column="71" />
+            <state relative-caret-position="355">
+              <caret line="267" column="57" lean-forward="true" selection-start-line="267" selection-start-column="57" selection-end-line="267" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DashboardActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="74" column="37" lean-forward="true" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,102 +131,67 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="509" column="9" lean-forward="true" selection-start-line="509" selection-start-column="9" selection-end-line="509" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DurianActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerViewProfile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="241" column="68" lean-forward="true" selection-start-line="241" selection-start-column="68" selection-end-line="241" selection-end-column="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custominputfield_control_measures.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="137" column="64" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="64" />
+            <state relative-caret-position="387">
+              <caret line="161" column="74" selection-start-line="161" selection-start-column="74" selection-end-line="161" selection-end-column="74" />
               <folding>
-                <element signature="e#4110#4134#0" expanded="true" />
-                <element signature="e#2798#4162#0" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_control_measures.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_dashboard.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerDashboardActivity.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/StaffViewProfile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="683">
+              <caret line="211" column="80" selection-start-line="211" selection-start-column="75" selection-end-line="211" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_farmer.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="137" column="64" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="64" />
+            <state relative-caret-position="222">
+              <caret line="54" column="58" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Farmer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="11" selection-end-column="34" />
               <folding>
-                <element signature="e#1183#2750#0" />
-                <element signature="e#4106#4130#0" expanded="true" />
-                <element signature="e#2794#4159#0" />
+                <element signature="e#907#908#0" expanded="true" />
+                <element signature="e#938#939#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_data_control_measures.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_view_profile.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="53" column="48" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/ControlMeasures.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-              <folding>
-                <element signature="e#697#698#0" expanded="true" />
-                <element signature="e#737#738#0" expanded="true" />
-                <element signature="e#769#770#0" expanded="true" />
-                <element signature="e#802#803#0" expanded="true" />
-                <element signature="e#831#832#0" expanded="true" />
-                <element signature="e#875#876#0" expanded="true" />
-                <element signature="e#911#912#0" expanded="true" />
-                <element signature="e#947#948#0" expanded="true" />
-                <element signature="e#979#980#0" expanded="true" />
-                <element signature="e#1029#1030#0" expanded="true" />
-                <element signature="e#1071#1072#0" expanded="true" />
-                <element signature="e#1105#1106#0" expanded="true" />
-                <element signature="e#1138#1139#0" expanded="true" />
-                <element signature="e#1187#1188#0" expanded="true" />
-                <element signature="e#1231#1232#0" expanded="true" />
-                <element signature="e#1265#1266#0" expanded="true" />
-                <element signature="e#1295#1296#0" expanded="true" />
-                <element signature="e#1341#1342#0" expanded="true" />
-                <element signature="e#1379#1380#0" expanded="true" />
-                <element signature="e#1419#1420#0" expanded="true" />
-                <element signature="e#1455#1456#0" expanded="true" />
-                <element signature="e#1513#1514#0" expanded="true" />
-                <element signature="e#1563#1564#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="32" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="32" />
+            <state relative-caret-position="300">
+              <caret line="71" column="39" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -199,18 +210,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Picasso</find>
-      <find>Durian</find>
-      <find>mImageUrl</find>
-      <find>getFileExtension</find>
-      <find>Register()</find>
-      <find>userID</find>
-      <find>picass</find>
-      <find>picasso</find>
-      <find>Update</find>
-      <find>species</find>
-      <find>CROP_IMAGE_ACTIVITY_REQUEST_CODE</find>
-      <find>ACTION_GET_CONTENT</find>
       <find>PICK_IMAGE_REQUEST_2</find>
       <find>dId</find>
       <find>dSpecies</find>
@@ -223,12 +222,24 @@
       <find>context</find>
       <find>Crop</find>
       <find>CropImageUri</find>
-      <find>dImgUri</find>
       <find>leafImage</find>
       <find>leafCharacteristic</find>
       <find>disease_img_view</find>
       <find>seekbar</find>
       <find>seekBar_disease_severity</find>
+      <find>mImageUri</find>
+      <find>dImgUri</find>
+      <find>Login Role</find>
+      <find>Login</find>
+      <find>Staff</find>
+      <find>staff</find>
+      <find>mProfileRefUpdate</find>
+      <find>pEmail</find>
+      <find>upd_staff_email</find>
+      <find>newNotel</find>
+      <find>farmerRole</find>
+      <find>amImageUrl</find>
+      <find>uID</find>
     </findStrings>
     <replaceStrings>
       <replace>durianID</replace>
@@ -238,6 +249,7 @@
       <replace>durianImage</replace>
       <replace>durianCharacteristic</replace>
       <replace>leafCharacteristics</replace>
+      <replace>Farmer</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -246,12 +258,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/tracking/MultiBoxTracker.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/CameraConnectionFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/LegacyCameraConnectionFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/customview/RecognitionScoreView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/customview/ResultsView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/CameraActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/assets/labelmap.txt" />
         <option value="$PROJECT_DIR$/app/src/main/assets/animal.txt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/tflite/TFLiteObjectDetectionAPIModel.java" />
@@ -267,16 +273,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Staff.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/ImageAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DashboardActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_staff_view_profile.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_staff.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/custominputfield.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/StaffViewProfile.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/RegistrationActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Durian.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_data_leaf.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/custominputfield_leaf.xml" />
@@ -292,11 +294,21 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/custominputfield_control_measures.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_control_measures.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/ControlMeasures.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DiseaseActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/CustomOnItemSelectedListener.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DurianActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/LeafActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DiseaseActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DurianActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_view_profile.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Farmer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DashboardActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_farmer.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/StaffViewProfile.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerViewProfile.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_dashboard.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/RegistrationActivity.java" />
       </list>
     </option>
   </component>
@@ -365,12 +377,10 @@
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\assets" />
-      <recent name="C:\Users\Kirin\Desktop\Sem 6 UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\java\com\example\duriandiseasedetectionsystem" />
-      <recent name="C:\Users\Kirin\Desktop\Sem 6 UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\res\values" />
-      <recent name="C:\Users\Kirin\Desktop\Sem 6 UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\res\layout" />
-      <recent name="C:\Users\Kirin\Desktop\Sem 6 UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\res\drawable-xhdpi" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kirin\Desktop\Sem 6 UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\res\drawable-v24" />
+      <recent name="C:\Users\kirin\AndroidStudioProjects\DurianDiseaseDetectionSystem\app\src\main\res\drawable" />
+      <recent name="C:\Users\kirin\AndroidStudioProjects\DurianDiseaseDetectionSystem\app\src\main\res\drawable-v24" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.duriandiseasedetectionsystem" />
@@ -378,10 +388,12 @@
     <key name="android.template.packageName">
       <recent name="com.example.duriandiseasedetectionsystem" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Kirin\Desktop\Sem 6 UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\res\drawable-v24" />
-      <recent name="C:\Users\kirin\AndroidStudioProjects\DurianDiseaseDetectionSystem\app\src\main\res\drawable" />
-      <recent name="C:\Users\kirin\AndroidStudioProjects\DurianDiseaseDetectionSystem\app\src\main\res\drawable-v24" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\assets" />
+      <recent name="C:\Users\Kirin\Desktop\Sem 6 UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\java\com\example\duriandiseasedetectionsystem" />
+      <recent name="C:\Users\Kirin\Desktop\Sem 6 UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\res\values" />
+      <recent name="C:\Users\Kirin\Desktop\Sem 6 UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\res\layout" />
+      <recent name="C:\Users\Kirin\Desktop\Sem 6 UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\res\drawable-xhdpi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -484,7 +496,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17590618" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.17590618" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -502,7 +514,7 @@
       <window_info anchor="bottom" id="Build" order="7" weight="0.33044422" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49840087" weight="0.30769232" />
-      <window_info anchor="bottom" id="Find" order="10" />
+      <window_info anchor="bottom" id="Find" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -517,64 +529,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="Created upload image into profile" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/Search.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="32" column="92" selection-start-line="32" selection-start-column="92" selection-end-line="32" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/example_item.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/tfl_logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DetectorActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="103" column="9" lean-forward="true" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_camera.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/spinnnerbackup.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/default_user.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="58" lean-forward="true" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/CameraActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -609,14 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -638,53 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_staff_view_profile.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_staff.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="66" column="27" lean-forward="true" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DashboardActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="113" column="24" selection-start-line="113" selection-start-column="24" selection-end-line="113" selection-end-column="97" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/StaffViewProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/RegistrationActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="75" column="40" lean-forward="true" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
-          <folding>
-            <element signature="e#4189#4190#0" expanded="true" />
-            <element signature="e#4231#4232#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_durian.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
@@ -696,21 +598,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_leaf.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="25" column="47" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Staff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield.xml">
       <provider editor-type-id="android-designer2" />
@@ -783,13 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Durian.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -873,6 +753,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/CustomOnItemSelectedListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_control_measures.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="137" column="64" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="64" />
+          <folding>
+            <element signature="e#1183#2750#0" />
+            <element signature="e#4106#4130#0" expanded="true" />
+            <element signature="e#2794#4159#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="491" column="81" selection-start-line="491" selection-start-column="81" selection-end-line="491" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custominputfield_control_measures.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="137" column="64" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="64" />
+          <folding>
+            <element signature="e#4110#4134#0" expanded="true" />
+            <element signature="e#2798#4162#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/ControlMeasures.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -905,69 +827,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/CustomOnItemSelectedListener.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Staff.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_control_measures.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="137" column="64" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="64" />
-          <folding>
-            <element signature="e#1183#2750#0" />
-            <element signature="e#4106#4130#0" expanded="true" />
-            <element signature="e#2794#4159#0" />
-          </folding>
+        <state relative-caret-position="283">
+          <caret line="82" column="12" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custominputfield_control_measures.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Durian.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="137" column="64" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="64" />
-          <folding>
-            <element signature="e#4110#4134#0" expanded="true" />
-            <element signature="e#2798#4162#0" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DurianActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="241" column="68" lean-forward="true" selection-start-line="241" selection-start-column="68" selection-end-line="241" selection-end-column="89" />
+        <state relative-caret-position="1264">
+          <caret line="436" column="122" selection-start-line="436" selection-start-column="113" selection-end-line="436" selection-end-column="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="111" column="16" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/LeafActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="439" column="81" selection-start-line="439" selection-start-column="81" selection-end-line="439" selection-end-column="81" />
+        <state relative-caret-position="452">
+          <caret line="293" selection-start-line="293" selection-end-line="293" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_staff_view_profile.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="41" lean-forward="true" selection-end-line="162" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DiseaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-791">
-          <caret line="380" column="71" lean-forward="true" selection-start-line="380" selection-start-column="71" selection-end-line="380" selection-end-column="71" />
+        <state relative-caret-position="340">
+          <caret line="65" column="37" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_view_profile.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="509" column="9" lean-forward="true" selection-start-line="509" selection-start-column="9" selection-end-line="509" selection-end-column="9" />
+        <state relative-caret-position="300">
+          <caret line="71" column="39" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_farmer.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="54" column="58" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/StaffViewProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="211" column="80" selection-start-line="211" selection-start-column="75" selection-end-line="211" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Farmer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="e#907#908#0" expanded="true" />
+            <element signature="e#938#939#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerDashboardActivity.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DashboardActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="74" column="37" lean-forward="true" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerViewProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="161" column="74" selection-start-line="161" selection-start-column="74" selection-end-line="161" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_dashboard.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/RegistrationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="267" column="57" lean-forward="true" selection-start-line="267" selection-start-column="57" selection-end-line="267" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="132" column="39" lean-forward="true" selection-start-line="132" selection-start-column="39" selection-end-line="132" selection-end-column="39" />
         </state>
       </provider>
     </entry>

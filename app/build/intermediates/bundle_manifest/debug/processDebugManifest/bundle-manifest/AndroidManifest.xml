@@ -28,6 +28,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.duriandiseasedetectionsystem.FarmerDashboardActivity" />
+        <activity android:name="com.example.duriandiseasedetectionsystem.FarmerViewProfile" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />

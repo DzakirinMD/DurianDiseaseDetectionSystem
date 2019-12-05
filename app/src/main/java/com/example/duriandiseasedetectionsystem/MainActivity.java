@@ -14,10 +14,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.duriandiseasedetectionsystem.model.Farmer;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,14 +32,20 @@ public class MainActivity extends AppCompatActivity {
     private EditText email,pass;
     private Button btnLogin;
 
+    private DatabaseReference mDatabase;
+
     private FirebaseAuth mAuth;
 
     private ProgressDialog mDialog;
+
+    String farmerRole;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -82,10 +95,45 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                                     mDialog.dismiss();
 
-                                    startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+                                    //get data for Farmer from db
+                                    mDatabase.child("Farmer").child(mAuth.getUid()).addValueEventListener(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                                            if (dataSnapshot.hasChildren()) {
+
+                                                Farmer farmer = dataSnapshot.getValue(Farmer.class);
+
+                                                farmerRole = farmer.getFarmerRole();
+
+                                                System.out.println("Login Role : " + farmerRole);
+
+                                                if (farmerRole.equalsIgnoreCase("user")){
+
+                                                    Intent intent = new Intent(getApplicationContext(), FarmerDashboardActivity.class);
+                                                    intent.putExtra("farmerRole",farmerRole);
+                                                    startActivity(intent);
+
+                                                } else{
+
+                                                    Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
+                                                    intent.putExtra("farmerRole",farmerRole);
+                                                    startActivity(intent);
+
+                                                }
+
+
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                        }
+                                    });
                                 } else {
                                     // If sign in fails, display a message to the user.
-                                    Toast.makeText(MainActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(MainActivity.this, "Login failed.. Your email/password is incorrect", Toast.LENGTH_SHORT).show();
                                     mDialog.dismiss();
                                 }
                             }

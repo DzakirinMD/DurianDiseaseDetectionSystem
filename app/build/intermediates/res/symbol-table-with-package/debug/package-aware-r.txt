@@ -1518,6 +1518,7 @@ id textSpacerNoTitle
 id textStart
 id textView
 id textView2
+id textView3
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1553,13 +1554,13 @@ id upd_durian_characteristic
 id upd_durian_img
 id upd_durian_name
 id upd_durian_species
+id upd_farmer_address
+id upd_farmer_email
+id upd_farmer_notel
+id upd_farmer_pass
 id upd_leaf_characteristic
 id upd_seekBar_cm_severity
 id upd_spinner_disease_cm
-id upd_staff_address
-id upd_staff_email
-id upd_staff_notel
-id upd_staff_pass
 id updateBtn
 id update_leaf_img
 id useLogo
@@ -1630,6 +1631,8 @@ layout activity_control_measures
 layout activity_dashboard
 layout activity_disease
 layout activity_durian
+layout activity_farmer_dashboard
+layout activity_farmer_view_profile
 layout activity_leaf
 layout activity_main
 layout activity_registration
@@ -1692,8 +1695,8 @@ layout toolbar
 layout updatedeleteinputfield
 layout updatedeleteinputfield_control_measures
 layout updatedeleteinputfield_disease
+layout updatedeleteinputfield_farmer
 layout updatedeleteinputfield_leaf
-layout updatedeleteinputfield_staff
 menu crop_image_menu
 menu mainmenu
 mipmap ic_launcher

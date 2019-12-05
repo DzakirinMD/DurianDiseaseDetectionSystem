@@ -1540,6 +1540,10 @@
         "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\8b7353a4da394401f2770946eabec9bd\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_farmer_view_profile.xml.flat",
+        "source": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\src\\main\\res\\layout\\activity_farmer_view_profile.xml"
+    },
+    {
         "merged": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_menu_layout.xml.flat",
         "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\8b7353a4da394401f2770946eabec9bd\\appcompat-1.1.0\\res\\layout\\abc_action_menu_layout.xml"
     },
@@ -1744,6 +1748,10 @@
         "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\8b7353a4da394401f2770946eabec9bd\\appcompat-1.1.0\\res\\color-v23\\abc_tint_default.xml"
     },
     {
+        "merged": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_farmer_dashboard.xml.flat",
+        "source": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\src\\main\\res\\layout\\activity_farmer_dashboard.xml"
+    },
+    {
         "merged": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_time.xml.flat",
         "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\478b79604eaaf934858ce3739dce1708\\core-1.1.0\\res\\layout\\notification_template_part_time.xml"
     },
@@ -1874,6 +1882,10 @@
     {
         "merged": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_singlechoice_material.xml.flat",
         "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\8b7353a4da394401f2770946eabec9bd\\appcompat-1.1.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\build\\intermediates\\res\\merged\\debug\\layout_updatedeleteinputfield_farmer.xml.flat",
+        "source": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\src\\main\\res\\layout\\updatedeleteinputfield_farmer.xml"
     },
     {
         "merged": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btndesign.xml.flat",
@@ -2262,10 +2274,6 @@
     {
         "merged": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow.xml.flat",
         "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\fc89f4a1c9db1f9f645452bfbb4cd681\\media-1.0.0\\res\\layout\\notification_template_big_media_narrow.xml"
-    },
-    {
-        "merged": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\build\\intermediates\\res\\merged\\debug\\layout_updatedeleteinputfield_staff.xml.flat",
-        "source": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\src\\main\\res\\layout\\updatedeleteinputfield_staff.xml"
     },
     {
         "merged": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_text_light.xml.flat",

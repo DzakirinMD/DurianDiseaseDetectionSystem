@@ -462,7 +462,7 @@ public class DiseaseActivity extends AppCompatActivity {
                                 }
                             });
                 } else {
-                    Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Please enter an image", Toast.LENGTH_LONG).show();
                     dialog.dismiss();
                 }
             }

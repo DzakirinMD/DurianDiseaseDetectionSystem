@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -20,6 +21,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.duriandiseasedetectionsystem.model.Farmer;
 import com.example.duriandiseasedetectionsystem.model.Staff;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -56,10 +58,12 @@ public class RegistrationActivity extends AppCompatActivity {
 
     //Firebase
     private FirebaseAuth mAuth;
-    private DatabaseReference databaseStaff;
+    private DatabaseReference databaseFarmer;
     private StorageReference mStorageRef;
 
     private ProgressDialog mDialog;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,10 +74,10 @@ public class RegistrationActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         //initialize FirebaseStorage
-        mStorageRef = FirebaseStorage.getInstance().getReference("Staff");
+        mStorageRef = FirebaseStorage.getInstance().getReference("Farmer");
 
         //initialize FirebaseDatabase
-        databaseStaff = FirebaseDatabase.getInstance().getReference("Staff");
+        databaseFarmer = FirebaseDatabase.getInstance().getReference("Farmer");
 
         mDialog = new ProgressDialog(this);
 
@@ -202,7 +206,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
                 } else {
                     // If sign in fails, display a message to the user.
-                    Toast.makeText(RegistrationActivity.this, "Registration failed.",
+                    Toast.makeText(RegistrationActivity.this, "Registration failed. Please Check your Email",
                             Toast.LENGTH_SHORT).show();
                     mDialog.dismiss();
                 }
@@ -218,6 +222,7 @@ public class RegistrationActivity extends AppCompatActivity {
         final String mAddress = address.getText().toString().trim();
         final String mNotel = notel.getText().toString().trim();
         final String mPass = pass.getText().toString().trim();
+        final String farmerRole = "user";
 
         //Get current user
         FirebaseUser user = mAuth.getCurrentUser();
@@ -251,16 +256,19 @@ public class RegistrationActivity extends AppCompatActivity {
                                     Uri downloadUrl = uri;
 
                                     //Put user id into FarmerID and push all info into db
-                                    Staff staff = new Staff(userID,mName,mAddress,mNotel,mEmail,mPass,downloadUrl.toString());
-                                    databaseStaff.child(userID).setValue(staff).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    Farmer data = new Farmer(userID,mName,mAddress,mNotel,mEmail,farmerRole,downloadUrl.toString(),mPass);
+                                    databaseFarmer.child(userID).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()) {
                                                 Toast.makeText(getApplicationContext(), "Successfuly Register", Toast.LENGTH_SHORT).show();
-                                                startActivity(new Intent(getApplicationContext(),DashboardActivity.class));
+                                                Intent intent = new Intent(getApplicationContext(), FarmerDashboardActivity.class);
+                                                intent.putExtra("farmerRole",farmerRole);
+                                                startActivity(intent);
+                                                finish();
                                                 mDialog.dismiss();
                                             } else {
-                                                Toast.makeText(RegistrationActivity.this, "Registration failed.", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(RegistrationActivity.this, "User Create failed.", Toast.LENGTH_SHORT).show();
                                                 mDialog.dismiss();
                                             }
                                         }
@@ -289,5 +297,4 @@ public class RegistrationActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
         }
     }
-
 }

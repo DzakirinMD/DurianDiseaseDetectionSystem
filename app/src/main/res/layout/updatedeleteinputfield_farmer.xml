@@ -51,7 +51,7 @@
                     android:layout_weight="3">
 
                     <TextView
-                        android:id="@+id/upd_staff_email"
+                        android:id="@+id/upd_farmer_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
@@ -92,7 +92,7 @@
                     android:layout_weight="3">
 
                     <EditText
-                        android:id="@+id/upd_staff_pass"
+                        android:id="@+id/upd_farmer_pass"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -129,7 +129,7 @@
                     android:layout_weight="3">
 
                     <EditText
-                        android:id="@+id/upd_staff_notel"
+                        android:id="@+id/upd_farmer_notel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -165,7 +165,7 @@
                     android:layout_weight="3">
 
                     <EditText
-                        android:id="@+id/upd_staff_address"
+                        android:id="@+id/upd_farmer_address"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
