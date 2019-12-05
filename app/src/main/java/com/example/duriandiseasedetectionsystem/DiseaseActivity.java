@@ -1,29 +1,45 @@
 package com.example.duriandiseasedetectionsystem;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.duriandiseasedetectionsystem.model.Disease;
+import com.example.duriandiseasedetectionsystem.model.Leaf;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 
 public class DiseaseActivity extends AppCompatActivity {
@@ -36,15 +52,18 @@ public class DiseaseActivity extends AppCompatActivity {
 
     //Firebase
     private DatabaseReference mDatabase;
+    private StorageReference mStorageRef;
     private FirebaseAuth mAuth;
 
     //Recyler..
     private RecyclerView recyclerView;
 
     //Update input field...
-    private EditText updateDName;
-    private EditText updateDSvr;
-    private EditText updateDSym;
+    private EditText updateDiseaseName;
+    private SeekBar seekDiseaseSeverity;
+    private SeekBar seekBarupdateDiseaseSeverity;
+    private ImageView updateDiseaseImage;
+    private EditText updateDiseaseSym;
     private Button btnDeleteUp;
     private Button btnUpdateUp;
 
@@ -53,7 +72,13 @@ public class DiseaseActivity extends AppCompatActivity {
     private String diseaseName;
     private int diseaseSeverity;
     private String diseaseSymptoms;
+    private String diseaseImage;
     private String post_key;
+
+    //uri to point to image and upload to firebase
+    private Uri mImageUri;
+    private ImageView adddiseaseImage;
+    private static int PICK_IMAGE_REQUEST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +106,7 @@ public class DiseaseActivity extends AppCompatActivity {
         //mDatabase.keepSynced(true); //keep synced ni untuk VIEW data recycler.. kalau nk INSERT data xyah letak ni lagi
         //yg bawah ni dy x simpan sapa yg create note tu
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Disease");
+        mStorageRef = FirebaseStorage.getInstance().getReference("Disease");
         mDatabase.keepSynced(true); //keep synced ni untuk VIEW data recycler.. kalau nk INSERT data xyah letak ni lagi
 
         //Recyler.........................
@@ -118,8 +144,22 @@ public class DiseaseActivity extends AppCompatActivity {
 
                 //panggil data dari xml alert dialog tu. ni untuk INSERT
                 final EditText add_disease_name = myview.findViewById(R.id.add_disease_name);
-                final SeekBar seekBarDiseaseSeverity = myview.findViewById(R.id.seekBarDiseaseSeverity);
+                seekDiseaseSeverity = myview.findViewById(R.id.seekBar_disease_severity);
+                adddiseaseImage = myview.findViewById(R.id.add_disease_img);
                 final EditText add_disease_symptoms = myview.findViewById(R.id.add_disease_symptoms);
+
+                //choose image from phone
+                adddiseaseImage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        PICK_IMAGE_REQUEST = 1;
+                        Intent intent = new Intent();
+                        intent.setType("image/*");
+                        intent.setAction(Intent.ACTION_GET_CONTENT);
+                        startActivityForResult(Intent.createChooser(intent,"Select Picture"), PICK_IMAGE_REQUEST);
+                        //This will go to onActivityResult()
+                    }
+                });
 
                 Button btnSave = myview.findViewById(R.id.btn_save);
 
@@ -128,7 +168,7 @@ public class DiseaseActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         String diseaseName = add_disease_name.getText().toString().trim();
-                        int diseaseSeverity = seekBarDiseaseSeverity.getProgress();
+                        int diseaseSeverity = seekDiseaseSeverity.getProgress();
                         String diseaseSymptom = add_disease_symptoms.getText().toString().trim();
 
                         // Error Checking
@@ -137,23 +177,55 @@ public class DiseaseActivity extends AppCompatActivity {
                             return;
                         }
                         if (TextUtils.isEmpty(diseaseSymptom)){
-                            add_disease_symptoms.setError("Characteristic is required..");
+                            add_disease_symptoms.setError("Symptoms is required..");
                             return;
                         }
 
                         //create randomkey untuk id
                         String diseaseID = mDatabase.push().getKey();
 
-                        //Call model constructor
-                        Disease data = new Disease(diseaseID, diseaseName, diseaseSeverity, diseaseSymptom);
+                        //get user Image
+                        if (mImageUri != null) {
+                            final StorageReference ref = mStorageRef.child("images/" + diseaseID + "." + getFileExtension(mImageUri));
+                            ref.putFile(mImageUri)
+                                    // Inside OnSuccess this to create data
+                                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                        @Override
+                                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                            ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                @Override
+                                                public void onSuccess(Uri uri) {
+                                                    Uri downloadUrl = uri;
 
-                        //masuk kan value dalam id tu
-                        mDatabase.child(diseaseID).setValue(data);
-
-                        Toast.makeText(getApplicationContext(),"Data Inserted", Toast.LENGTH_SHORT).show();
-
-                        //tutup balik dialog bila dh masuk data
-                        dialog.dismiss();
+                                                    //Put user id into FarmerID and push all info into db
+                                                    Disease data = new Disease(diseaseID, diseaseName, diseaseSeverity, diseaseSymptom, downloadUrl.toString());
+                                                    mDatabase.child(diseaseID).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                        @Override
+                                                        public void onComplete(@NonNull Task<Void> task) {
+                                                            if (task.isSuccessful()) {
+                                                                Toast.makeText(getApplicationContext(), "Successfully Added", Toast.LENGTH_SHORT).show();
+                                                                dialog.dismiss();
+                                                            } else {
+                                                                Toast.makeText(DiseaseActivity.this, "Failed.", Toast.LENGTH_SHORT).show();
+                                                                dialog.dismiss();
+                                                            }
+                                                        }
+                                                    });
+                                                }
+                                            });
+                                        }
+                                    })
+                                    .addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(getApplicationContext(),"Failed to load Image", Toast.LENGTH_LONG).show();
+                                            dialog.dismiss();
+                                        }
+                                    });
+                        } else {
+                            Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
+                            dialog.dismiss();
+                        }
 
                     }
                 }); // End of btnSave
@@ -169,7 +241,78 @@ public class DiseaseActivity extends AppCompatActivity {
     } // END of Oncreate
 
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch(PICK_IMAGE_REQUEST) {
+            case 1:
+                if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
+
+                    mImageUri = data.getData();//get image data
+
+                    Picasso.with(getApplicationContext()).load(mImageUri).into(adddiseaseImage);
+
+                }
+                break;
+            case 2:
+                if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
+
+                    mImageUri = data.getData();//get image data
+
+                    Picasso.with(this).load(mImageUri).into(updateDiseaseImage);
+                }
+                break;
+        }
+    }
+
+    private String getFileExtension(Uri uri) {
+        ContentResolver cR = getContentResolver();
+        MimeTypeMap mime = MimeTypeMap.getSingleton();
+        return mime.getExtensionFromMimeType(cR.getType(uri));
+    }
+
     //START OF VIEW
+
+    //Recycler view punya class dan view holder adapter
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
+
+        private Context context;
+        View myview;
+
+        public MyViewHolder (View itemView){
+            super(itemView);
+            myview = itemView;
+        }
+
+        //Semua R.id. bawah ni ambik dari item_data.xml
+        public void setdName(String name){
+            TextView mName = myview.findViewById(R.id.disease_name_view);
+            //nak tukar texview kepada value dari database
+            mName.setText(name);
+        }
+
+        public void setdSeverity(int Severity){
+            TextView mSeverity = myview.findViewById(R.id.disease_severity_view);
+            mSeverity.setText(Integer.toString(Severity));
+            //pakai integer.tostring sbb nk convert int to string
+        }
+
+        //Semua R.id. bawah ni ambik dari item_data.xml
+        public void setdImage(String name){
+            ImageView imageView = (ImageView) myview.findViewById(R.id.disease_img_view);
+            //nak tukar texview kepada value dari database
+            Picasso.with(context).load(name).into(imageView);
+        }
+
+        public void setdSymptoms(String Symptoms){
+            TextView mSymptoms = myview.findViewById(R.id.disease_symptoms_view);
+            mSymptoms.setText(Symptoms);
+        }
+    }
+    // end of recylerview class
+
+
     //untuk automatic fetch data dari database
     @Override
     protected void onStart() {
@@ -189,6 +332,7 @@ public class DiseaseActivity extends AppCompatActivity {
                 viewHolder.setdName(model.getDiseaseName());
                 viewHolder.setdSeverity(model.getDiseaseSeverity());
                 viewHolder.setdSymptoms(model.getDiseaseSymptoms());
+                viewHolder.setdImage(model.getDiseaseImage());
 
 
                 // Setting bila click kat card2 recycler view tu nk jadi apa
@@ -203,6 +347,7 @@ public class DiseaseActivity extends AppCompatActivity {
                         diseaseName = model.getDiseaseName();
                         diseaseSeverity = model.getDiseaseSeverity();
                         diseaseSymptoms = model.getDiseaseSymptoms();
+                        diseaseImage = model.getDiseaseImage();
 
                         //call update dan delete data kt recyler view
                         updateDeleteData();
@@ -216,35 +361,7 @@ public class DiseaseActivity extends AppCompatActivity {
     }
     //On Start End
 
-    //Recycler view punya class dan view holder
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        View myview;
-
-        public MyViewHolder (View itemView){
-            super(itemView);
-            myview = itemView;
-        }
-
-        //Semua R.id. bawah ni ambik dari item_data.xml
-        public void setdName(String name){
-            TextView mName = myview.findViewById(R.id.name);
-            //nak tukar texview kepada value dari database
-            mName.setText(name);
-        }
-
-        public void setdSeverity(int Severity){
-            TextView mSeverity = myview.findViewById(R.id.severity);
-            mSeverity.setText(Integer.toString(Severity));
-            //pakai integer.tostring sbb nk convert int to string
-        }
-
-        public void setdSymptoms(String Symptoms){
-            TextView mSymptoms = myview.findViewById(R.id.symptoms);
-            mSymptoms.setText(Symptoms);
-        }
-    }
-    // end of recylerview class
 
     //untuk update data dan show dialog dia
     public void  updateDeleteData(){
@@ -258,20 +375,36 @@ public class DiseaseActivity extends AppCompatActivity {
         final AlertDialog dialog = mydialog.create();
 
         //collect data from field of updatedeleteinputfield
-        updateDName = myview.findViewById(R.id.upd_disease_name);
-        final SeekBar updateDSvr = myview.findViewById(R.id.updseekBarDiseaseSeverity);
-        updateDSym = myview.findViewById(R.id.upd_disease_symptoms);
+        updateDiseaseName = myview.findViewById(R.id.upd_disease_name);
+        seekBarupdateDiseaseSeverity = myview.findViewById(R.id.seekBar_upd_disease_severity);
+        updateDiseaseSym = myview.findViewById(R.id.upd_disease_symptoms);
+        updateDiseaseImage = myview.findViewById(R.id.upd_disease_img);
 
         //ni untuk ambik apa yg ada kt recycler(item_data.xml) tu untuk letak kat dialog update
         //DARI GLOBAL VARIABLE
-        updateDName.setText(diseaseName);
-        updateDName.setSelection(diseaseName.length());
+        updateDiseaseName.setText(diseaseName);
+        updateDiseaseName.setSelection(diseaseName.length());
 
         //cari untuk seekbar sama
-        updateDSvr.getProgress();
+        seekBarupdateDiseaseSeverity.getProgress();
 
-        updateDSym.setText(diseaseSymptoms);
-        updateDSym.setSelection(diseaseSymptoms.length());
+        Picasso.with(getApplicationContext()).load(diseaseImage).into(updateDiseaseImage);
+
+        updateDiseaseSym.setText(diseaseSymptoms);
+        updateDiseaseSym.setSelection(diseaseSymptoms.length());
+
+        //choose image from phone
+        updateDiseaseImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PICK_IMAGE_REQUEST = 2;
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent,"Select Picture"), PICK_IMAGE_REQUEST);
+                //This will go to onActivityResult()
+            }
+        });
 
         //instantiate button
         btnDeleteUp = myview.findViewById(R.id.btn_delete_upd);
@@ -282,24 +415,56 @@ public class DiseaseActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 //variable ni dari global variable
-                diseaseName = updateDName.getText().toString().trim();
-                int dSvrProgress = updateDSvr.getProgress();
-                diseaseSymptoms = updateDSym.getText().toString().trim();
+                diseaseName = updateDiseaseName.getText().toString().trim();
+                diseaseSeverity = seekBarupdateDiseaseSeverity.getProgress();
+                diseaseSymptoms = updateDiseaseSym.getText().toString().trim();
 
                 System.out.println(diseaseName);
-                System.out.println(dSvrProgress);
                 System.out.println(diseaseSymptoms);
                 System.out.println(post_key);
 
-                //Call model constructor
-                Disease data = new Disease(post_key,diseaseName,dSvrProgress,diseaseSymptoms);
+                //get user Image
+                if (mImageUri != null) {
+                    final StorageReference ref = mStorageRef.child("images/" + diseaseId + "." + getFileExtension(mImageUri));
+                    ref.putFile(mImageUri)
+                            // Inside OnSuccess this to create data
+                            .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                @Override
+                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                    ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                        @Override
+                                        public void onSuccess(Uri uri) {
+                                            Uri downloadUrl = uri;
 
-                //masuk kan value dalam id tu (position dy)
-                mDatabase.child(post_key).setValue(data);
-
-                Toast.makeText(getApplicationContext(),"Data Updated", Toast.LENGTH_SHORT).show();
-
-                dialog.dismiss();
+                                            //Put user id into FarmerID and push all info into db
+                                            Disease data = new Disease(post_key, diseaseName, diseaseSeverity, diseaseSymptoms, downloadUrl.toString());
+                                            mDatabase.child(post_key).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    if (task.isSuccessful()) {
+                                                        Toast.makeText(getApplicationContext(), "Data Updated", Toast.LENGTH_SHORT).show();
+                                                        dialog.dismiss();
+                                                    } else {
+                                                        Toast.makeText(DiseaseActivity.this, " Failed.", Toast.LENGTH_SHORT).show();
+                                                        dialog.dismiss();
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    });
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
+                                    dialog.dismiss();
+                                }
+                            });
+                } else {
+                    Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
+                    dialog.dismiss();
+                }
             }
         });
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="7dp"
-    app:cardElevation="7dp"
-    android:elevation="6dp">
+    android:elevation="6dp"
+    app:cardElevation="7dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,37 +18,49 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/leaf_img_view"
+                android:id="@+id/disease_img_view"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"/>
+                android:layout_height="200dp" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_weight="3"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="3">
 
             <TextView
-                android:id="@+id/leaf_name_view"
+                android:id="@+id/disease_name_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Name"
                 android:maxLines="1"
+                android:padding="5dp"
+                android:text="Name"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/disease_severity_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/disease_name_view"
+                android:maxLines="2"
+                android:padding="5dp"
+                android:text="Severity"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@android:color/black" />
 
 
             <TextView
-                android:id="@+id/leaf_symptoms_view"
+                android:id="@+id/disease_symptoms_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/leaf_name_view"
-                android:text="Symptoms"
+                android:layout_below="@+id/disease_severity_view"
                 android:maxLines="2"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:padding="5dp"
-                android:textColor="@android:color/black"/>
+                android:text="Symptoms"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/black" />
 
 
         </RelativeLayout>

@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:text="Name"
                 android:maxLines="1"
+                android:padding="5dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black" />
 

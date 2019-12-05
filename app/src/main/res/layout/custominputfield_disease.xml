@@ -19,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp" />
 
-            <!--Line pertama-->
+            <!--Line Pertama-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,11 +87,10 @@
                     android:layout_height="wrap_content">
 
                     <SeekBar
-                        android:id="@+id/seekBarDiseaseSeverity"
-                        android:max="5"
+                        android:id="@+id/seekBar_disease_severity"
+                        android:max="3"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"/>
-
 
                 </RelativeLayout>
 

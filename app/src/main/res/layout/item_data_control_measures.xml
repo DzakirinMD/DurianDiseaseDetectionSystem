@@ -10,43 +10,62 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <TextView
+            <ImageView
+                android:id="@+id/cmImg_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Gambar Durian"
-                android:padding="12dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="#840CEE"
-                android:id="@+id/date"/>
+                android:layout_height="200dp"/>
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_weight="3"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/cmName"
+                android:id="@+id/cmName_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Name"
                 android:maxLines="1"
+                android:padding="5dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black" />
 
             <TextView
-                android:id="@+id/cmIns"
+                android:id="@+id/cmDisease_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cmName"
+                android:layout_below="@+id/cmName_view"
+                android:maxLines="2"
+                android:padding="5dp"
+                android:text="Disease"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cmSeverity_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cmDisease_view"
+                android:maxLines="2"
+                android:padding="5dp"
+                android:text="Severity"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cmIns_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cmSeverity_view"
                 android:text="Instruction"
                 android:maxLines="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"

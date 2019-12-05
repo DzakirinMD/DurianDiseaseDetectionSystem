@@ -37,6 +37,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array disease_arrays
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1243,8 +1244,10 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_cm_image
 id add_cm_instruction
 id add_cm_name
+id add_disease_img
 id add_disease_name
 id add_disease_symptoms
 id add_durian_characteristic
@@ -1253,6 +1256,8 @@ id add_durian_name
 id add_durian_species
 id add_leaf_characteristic
 id add_leaf_img
+id add_seekBar_cm_severity
+id add_spinner_disease_cm
 id address_registration
 id adjust_height
 id adjust_width
@@ -1286,8 +1291,11 @@ id checked
 id chronometer
 id clip_horizontal
 id clip_vertical
-id cmIns
-id cmName
+id cmDisease_view
+id cmImg_view
+id cmIns_view
+id cmName_view
+id cmSeverity_view
 id cmdasboardimg
 id cmdasboardtxt
 id collapseActionView
@@ -1307,7 +1315,6 @@ id crop_info
 id custom
 id customPanel
 id dark
-id date
 id debug_overlay
 id decor_content_parent
 id default_activity_button
@@ -1320,6 +1327,10 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
+id disease_img_view
+id disease_name_view
+id disease_severity_view
+id disease_symptoms_view
 id diseasedashboardimg
 id diseasedashboardtxt
 id durian_view
@@ -1457,10 +1468,10 @@ id search_plate
 id search_something
 id search_src_text
 id search_voice_btn
-id seekBarDiseaseSeverity
+id seekBar_disease_severity
+id seekBar_upd_disease_severity
 id select_dialog_listview
 id selected
-id severity
 id shortcut
 id showCustom
 id showHome
@@ -1491,7 +1502,6 @@ id status_bar_latest_event_content
 id stretch
 id submenuarrow
 id submit_area
-id symptoms
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -1533,8 +1543,10 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id upd_cm_image
 id upd_cm_instruction
 id upd_cm_name
+id upd_disease_img
 id upd_disease_name
 id upd_disease_symptoms
 id upd_durian_characteristic
@@ -1542,13 +1554,14 @@ id upd_durian_img
 id upd_durian_name
 id upd_durian_species
 id upd_leaf_characteristic
+id upd_seekBar_cm_severity
+id upd_spinner_disease_cm
 id upd_staff_address
 id upd_staff_email
 id upd_staff_notel
 id upd_staff_pass
 id updateBtn
 id update_leaf_img
-id updseekBarDiseaseSeverity
 id useLogo
 id user_list_btn
 id view_offset_helper
@@ -1747,6 +1760,7 @@ string crop_image_menu_rotate_left
 string crop_image_menu_rotate_right
 string default_web_client_id
 string description_info
+string disease_prompt
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string firebase_database_url

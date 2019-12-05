@@ -77,7 +77,7 @@ public class LeafActivity extends AppCompatActivity {
     //Variable
     private String leafID;
     private String leafImage;
-    private String leafCharacteristic;
+    private String leafCharacteristics;
     private String post_key;
 
     //uri to point to image and upload to firebase
@@ -276,7 +276,7 @@ public class LeafActivity extends AppCompatActivity {
 
     //START OF VIEW
 
-    //Recycler view punya class dan view holder
+    //Recycler view punya class dan view holder adapter
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
         private Context context;
@@ -294,7 +294,7 @@ public class LeafActivity extends AppCompatActivity {
             Picasso.with(context).load(name).into(imageView);
         }
 
-        public void setLeafCharacteristic(String characteristic){
+        public void setleafCharacteristics(String characteristic){
             TextView mChar = myview.findViewById(R.id.leaf_characteristic_view);
             mChar.setText(characteristic);
         }
@@ -319,7 +319,7 @@ public class LeafActivity extends AppCompatActivity {
 
                 //Your Method to load Data
                 viewHolder.setLeafImage(model.getLeafImage());
-                viewHolder.setLeafCharacteristic(model.getLeafCharacteristic());
+                viewHolder.setleafCharacteristics(model.getleafCharacteristics());
 
 
                 // Setting bila click kat card2 recycler view tu nk jadi apa
@@ -333,7 +333,7 @@ public class LeafActivity extends AppCompatActivity {
                         //Global Variable
                         leafID = model.getLeafID();
                         leafImage = model.getLeafImage();
-                        leafCharacteristic = model.getLeafCharacteristic();
+                        leafCharacteristics = model.getleafCharacteristics();
 
                         //call update dan delete data kt recyler view
                         updateDeleteData();
@@ -368,8 +368,8 @@ public class LeafActivity extends AppCompatActivity {
         //yg dalam setText tu dari Global Variable
         Picasso.with(getApplicationContext()).load(leafImage).into(updateLImage);
 
-        updateLChr.setText(leafCharacteristic);
-        updateLChr.setSelection(leafCharacteristic.length());
+        updateLChr.setText(leafCharacteristics);
+        updateLChr.setSelection(leafCharacteristics.length());
 
         //choose image from phone
         updateLImage.setOnClickListener(new View.OnClickListener() {
@@ -393,9 +393,9 @@ public class LeafActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 //variable ni dari global variable
-                leafCharacteristic = updateLChr.getText().toString().trim();
+                leafCharacteristics = updateLChr.getText().toString().trim();
 
-                System.out.println(leafCharacteristic);
+                System.out.println(leafCharacteristics);
                 System.out.println(post_key);
 
                 //get user Image
@@ -412,7 +412,7 @@ public class LeafActivity extends AppCompatActivity {
                                             Uri downloadUrl = uri;
 
                                             //Put user id into FarmerID and push all info into db
-                                            Leaf data = new Leaf(post_key, downloadUrl.toString(), leafCharacteristic);
+                                            Leaf data = new Leaf(post_key, downloadUrl.toString(), leafCharacteristics);
                                             mDatabase.child(post_key).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
@@ -437,7 +437,7 @@ public class LeafActivity extends AppCompatActivity {
                                 }
                             });
                 } else {
-                    Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Please enter an image", Toast.LENGTH_LONG).show();
                     dialog.dismiss();
                 }
 

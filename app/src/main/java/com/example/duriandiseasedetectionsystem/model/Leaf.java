@@ -4,16 +4,16 @@ public class Leaf {
 
     private String leafID;
     private String leafImage;
-    private String leafCharacteristic;
+    private String leafCharacteristics;
 
     public Leaf(){
 
     }
 
-    public Leaf(String leafID, String leafImage, String leafCharacteristic) {
+    public Leaf(String leafID, String leafImage, String leafCharacteristics) {
         this.leafID = leafID;
         this.leafImage = leafImage;
-        this.leafCharacteristic = leafCharacteristic;
+        this.leafCharacteristics = leafCharacteristics;
     }
 
     public String getLeafID() {
@@ -32,11 +32,11 @@ public class Leaf {
         this.leafImage = leafImage;
     }
 
-    public String getLeafCharacteristic() {
-        return leafCharacteristic;
+    public String getleafCharacteristics() {
+        return leafCharacteristics;
     }
 
-    public void setLeafCharacteristic(String leafCharacteristic) {
-        this.leafCharacteristic = leafCharacteristic;
+    public void setleafCharacteristics(String leafCharacteristics) {
+        this.leafCharacteristics = leafCharacteristics;
     }
 }

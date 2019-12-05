@@ -1,29 +1,50 @@
 package com.example.duriandiseasedetectionsystem;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
         import androidx.appcompat.app.AppCompatActivity;
         import androidx.appcompat.widget.Toolbar;
         import androidx.recyclerview.widget.LinearLayoutManager;
         import androidx.recyclerview.widget.RecyclerView;
 
-        import android.os.Bundle;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
         import android.text.TextUtils;
         import android.view.LayoutInflater;
         import android.view.View;
-        import android.widget.Button;
+import android.webkit.MimeTypeMap;
+import android.widget.Button;
         import android.widget.EditText;
-        import android.widget.TextView;
+import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.Spinner;
+import android.widget.TextView;
         import android.widget.Toast;
 
         import com.example.duriandiseasedetectionsystem.model.ControlMeasures;
-        import com.example.duriandiseasedetectionsystem.model.Durian;
+import com.example.duriandiseasedetectionsystem.model.Disease;
+import com.example.duriandiseasedetectionsystem.model.Durian;
         import com.firebase.ui.database.FirebaseRecyclerAdapter;
-        import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
         import com.google.firebase.auth.FirebaseAuth;
         import com.google.firebase.auth.FirebaseUser;
         import com.google.firebase.database.DatabaseReference;
         import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class ControlMeasuresActivity extends AppCompatActivity {
@@ -34,8 +55,17 @@ public class ControlMeasuresActivity extends AppCompatActivity {
     //Floating button
     private FloatingActionButton flt_btn;
 
+    //Spinner
+    private Spinner spinnerAddCm;
+    private Spinner spinnerUpdCm;
+
+    //SeekBar
+    private SeekBar seekAddDiseaseSeverity;
+    private SeekBar seekUpdDiseaseSeverity;
+
     //Firebase
     private DatabaseReference mDatabase;
+    private StorageReference mStorageRef;
     private FirebaseAuth mAuth;
 
     //Recyler..
@@ -44,14 +74,23 @@ public class ControlMeasuresActivity extends AppCompatActivity {
     //Update input field...
     private EditText updateCMName;
     private EditText updateCMIns;
+    private ImageView updateCMImg;
     private Button btnDeleteUp;
     private Button btnUpdateUp;
 
     //Variable
     private String cmId;
     private String cmName;
+    private String cmDisease;
+    private int cmSeverity;
+    private String cmImage;
     private String cmIns;
     private String post_key;
+
+    //uri to point to image and upload to firebase
+    private Uri mImageUri;
+    private ImageView addcmImage;
+    private static int PICK_IMAGE_REQUEST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +118,7 @@ public class ControlMeasuresActivity extends AppCompatActivity {
         //mDatabase.keepSynced(true); //keep synced ni untuk VIEW data recycler.. kalau nk INSERT data xyah letak ni lagi
         //yg bawah ni dy x simpan sapa yg create note tu
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Control_Measures");
+        mStorageRef = FirebaseStorage.getInstance().getReference("Control_Measures");
         mDatabase.keepSynced(true); //keep synced ni untuk VIEW data recycler.. kalau nk INSERT data xyah letak ni lagi
 
         //Recyler.........................
@@ -114,9 +154,28 @@ public class ControlMeasuresActivity extends AppCompatActivity {
                 //nak sambungkan 2 input field dalam custom dialog tu dan create dialog tu
                 final AlertDialog dialog = myDialog.create();
 
-                //panggil data dari xml alert dialog tu. ni untuk INSERT
+                //panggil data dari xml custominputfield_control_measures ni untuk INSERT
                 final EditText addCMName = myview.findViewById(R.id.add_cm_name);
+                addcmImage = myview.findViewById(R.id.add_cm_image);
+                seekAddDiseaseSeverity = myview.findViewById(R.id.add_seekBar_cm_severity);
                 final EditText addCMInstruction = myview.findViewById(R.id.add_cm_instruction);
+                //call spinner
+                spinnerAddCm = (Spinner) myview.findViewById(R.id.add_spinner_disease_cm);
+                spinnerAddCm.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+
+
+                //choose image from phone
+                addcmImage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        PICK_IMAGE_REQUEST = 1;
+                        Intent intent = new Intent();
+                        intent.setType("image/*");
+                        intent.setAction(Intent.ACTION_GET_CONTENT);
+                        startActivityForResult(Intent.createChooser(intent,"Select Picture"), PICK_IMAGE_REQUEST);
+                        //This will go to onActivityResult()
+                    }
+                });
 
 
                 Button btnSave = myview.findViewById(R.id.btn_save);
@@ -127,7 +186,8 @@ public class ControlMeasuresActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         String cmName = addCMName.getText().toString().trim();
                         String cmIns = addCMInstruction.getText().toString().trim();
-
+                        String cmDisease = String.valueOf(spinnerAddCm.getSelectedItem());
+                        int diseaseSeverity = seekAddDiseaseSeverity.getProgress();
 
                         // Error Checking
                         if (TextUtils.isEmpty(cmName)){
@@ -143,16 +203,48 @@ public class ControlMeasuresActivity extends AppCompatActivity {
                         //create randomkey untuk id
                         String cmID = mDatabase.push().getKey();
 
-                        //Call model constructor
-                        ControlMeasures data = new ControlMeasures(cmID, cmName, cmIns);
+                        //get user Image
+                        if (mImageUri != null) {
+                            final StorageReference ref = mStorageRef.child("images/" + cmID + "." + getFileExtension(mImageUri));
+                            ref.putFile(mImageUri)
+                                    // Inside OnSuccess this to create data
+                                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                        @Override
+                                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                            ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                @Override
+                                                public void onSuccess(Uri uri) {
+                                                    Uri downloadUrl = uri;
 
-                        //masuk kan value dalam id tu
-                        mDatabase.child(cmID).setValue(data);
-
-                        Toast.makeText(getApplicationContext(),"Data Inserted", Toast.LENGTH_SHORT).show();
-
-                        //tutup balik dialog bila dh masuk data
-                        dialog.dismiss();
+                                                    //Put user id into FarmerID and push all info into db
+                                                    ControlMeasures data = new ControlMeasures(cmID, cmName, cmDisease, diseaseSeverity, downloadUrl.toString(), cmIns);
+                                                    mDatabase.child(cmID).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                        @Override
+                                                        public void onComplete(@NonNull Task<Void> task) {
+                                                            if (task.isSuccessful()) {
+                                                                Toast.makeText(getApplicationContext(), "Successfully Added", Toast.LENGTH_SHORT).show();
+                                                                dialog.dismiss();
+                                                            } else {
+                                                                Toast.makeText(ControlMeasuresActivity.this, "Failed.", Toast.LENGTH_SHORT).show();
+                                                                dialog.dismiss();
+                                                            }
+                                                        }
+                                                    });
+                                                }
+                                            });
+                                        }
+                                    })
+                                    .addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(getApplicationContext(),"Failed to load Image", Toast.LENGTH_LONG).show();
+                                            dialog.dismiss();
+                                        }
+                                    });
+                        } else {
+                            Toast.makeText(getApplicationContext(),"Please enter an image", Toast.LENGTH_LONG).show();
+                            dialog.dismiss();
+                        }
 
                     }
                 });
@@ -167,8 +259,82 @@ public class ControlMeasuresActivity extends AppCompatActivity {
 
     } // END of Oncreate
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch(PICK_IMAGE_REQUEST) {
+            case 1:
+                if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
+
+                    mImageUri = data.getData();//get image data
+
+                    Picasso.with(getApplicationContext()).load(mImageUri).into(addcmImage);
+
+                }
+                break;
+            case 2:
+                if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
+
+                    mImageUri = data.getData();//get image data
+
+                    Picasso.with(this).load(mImageUri).into(updateCMImg);
+                }
+                break;
+        }
+    }
+
+    private String getFileExtension(Uri uri) {
+        ContentResolver cR = getContentResolver();
+        MimeTypeMap mime = MimeTypeMap.getSingleton();
+        return mime.getExtensionFromMimeType(cR.getType(uri));
+    }
+
 
     //START OF VIEW
+
+    //Recycler view punya class dan view holder
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
+
+        private Context context;
+        View myview;
+
+        public MyViewHolder (View itemView){
+            super(itemView);
+            myview = itemView;
+        }
+
+        //Semua R.id. bawah ni ambik dari item_data.xml
+        public void setCmName(String cmName){
+            TextView mName = myview.findViewById(R.id.cmName_view);
+            //nak tukar texview kepada value dari database
+            mName.setText(cmName);
+        }
+
+        public void setCmDisease(String leafdurian){
+            TextView lDurian = myview.findViewById(R.id.cmDisease_view);
+            lDurian.setText(leafdurian);
+        }
+
+        public void setCmSeverity(int Severity){
+            TextView mSeverity = myview.findViewById(R.id.cmSeverity_view);
+            mSeverity.setText(Integer.toString(Severity));
+            //pakai integer.tostring sbb nk convert int to string
+        }
+
+        public void setCmInstruction(String cmInstruction){
+            TextView CMInstruction = myview.findViewById(R.id.cmIns_view);
+            CMInstruction.setText(cmInstruction);
+        }
+
+        //Semua R.id. bawah ni ambik dari item_data.xml
+        public void setCMImage(String name){
+            ImageView imageView = (ImageView) myview.findViewById(R.id.cmImg_view);
+            //nak tukar texview kepada value dari database
+            Picasso.with(context).load(name).into(imageView);
+        }
+
+    }
     //untuk automatic fetch data dari database
     @Override
     protected void onStart() {
@@ -186,9 +352,10 @@ public class ControlMeasuresActivity extends AppCompatActivity {
 
                 //Your Method to load Data
                 viewHolder.setCmName(model.getCmName());
+                viewHolder.setCmDisease(model.getCmDisease());
+                viewHolder.setCmSeverity(model.getCmSeverity());
                 viewHolder.setCmInstruction(model.getCmInstruction());
-
-
+                viewHolder.setCMImage(model.getCmImage());
 
                 // Setting bila click kat card2 recycler view tu nk jadi apa
                 viewHolder.myview.setOnClickListener(new View.OnClickListener() {
@@ -200,7 +367,10 @@ public class ControlMeasuresActivity extends AppCompatActivity {
 
                         cmId = model.getCmID();
                         cmName = model.getCmName();
+                        cmDisease = model.getCmDisease();
+                        cmSeverity = model.getCmSeverity();
                         cmIns = model.getCmInstruction();
+                        cmImage = model.getCmImage();
 
                         //call update dan delete data kt recyler view
                         updateDeleteData();
@@ -214,29 +384,7 @@ public class ControlMeasuresActivity extends AppCompatActivity {
     }
     //On Start End
 
-    //Recycler view punya class dan view holder
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        View myview;
-
-        public MyViewHolder (View itemView){
-            super(itemView);
-            myview = itemView;
-        }
-
-        //Semua R.id. bawah ni ambik dari item_data.xml
-        public void setCmName(String cmName){
-            TextView mName = myview.findViewById(R.id.cmName);
-            //nak tukar texview kepada value dari database
-            mName.setText(cmName);
-        }
-
-        public void setCmInstruction(String cmInstruction){
-            TextView CMInstruction = myview.findViewById(R.id.cmIns);
-            CMInstruction.setText(cmInstruction);
-        }
-
-    }
     // end of recylerview class
 
     //untuk update data dan show dialog dia
@@ -252,7 +400,11 @@ public class ControlMeasuresActivity extends AppCompatActivity {
 
         //collect data from field of updatedeleteinputfield
         updateCMName = myview.findViewById(R.id.upd_cm_name);
+        spinnerUpdCm = myview.findViewById(R.id.upd_spinner_disease_cm);
+        spinnerUpdCm.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+        seekUpdDiseaseSeverity = myview.findViewById(R.id.upd_seekBar_cm_severity);
         updateCMIns = myview.findViewById(R.id.upd_cm_instruction);
+        updateCMImg = myview.findViewById(R.id.upd_cm_image);
 
         System.out.println("New CM name" + updateCMName);
 
@@ -260,10 +412,25 @@ public class ControlMeasuresActivity extends AppCompatActivity {
         updateCMName.setText(cmName);
         updateCMName.setSelection(cmName.length());
 
+        Picasso.with(getApplicationContext()).load(cmImage).into(updateCMImg);
+        seekUpdDiseaseSeverity.getProgress();
+
+
         updateCMIns.setText(cmIns);
         updateCMIns.setSelection(cmIns.length());
 
-
+        //choose image from phone
+        updateCMImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PICK_IMAGE_REQUEST = 2;
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent,"Select Picture"), PICK_IMAGE_REQUEST);
+                //This will go to onActivityResult()
+            }
+        });
 
         //instantiate button
         btnDeleteUp = myview.findViewById(R.id.btn_delete_upd);
@@ -275,21 +442,56 @@ public class ControlMeasuresActivity extends AppCompatActivity {
 
                 //variable ni dari global variable
                 cmName = updateCMName.getText().toString().trim();
+                cmDisease = String.valueOf(spinnerAddCm.getSelectedItem());
+                cmSeverity = seekUpdDiseaseSeverity.getProgress();
                 cmIns = updateCMIns.getText().toString().trim();
 
                 System.out.println(cmName);
                 System.out.println(cmIns);
                 System.out.println(post_key);
 
-                //Call model constructor
-                ControlMeasures data = new ControlMeasures(post_key,cmName,cmIns);
+                //get user Image
+                if (mImageUri != null) {
+                    final StorageReference ref = mStorageRef.child("images/" + cmId + "." + getFileExtension(mImageUri));
+                    ref.putFile(mImageUri)
+                            // Inside OnSuccess this to create data
+                            .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                @Override
+                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                    ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                        @Override
+                                        public void onSuccess(Uri uri) {
+                                            Uri downloadUrl = uri;
 
-                //masuk kan value dalam id tu (position dy)
-                mDatabase.child(post_key).setValue(data);
-
-                Toast.makeText(getApplicationContext(),"Data Updated", Toast.LENGTH_SHORT).show();
-
-                dialog.dismiss();
+                                            //Put user id into FarmerID and push all info into db
+                                            ControlMeasures data = new ControlMeasures(post_key, cmName, cmDisease, cmSeverity, downloadUrl.toString(), cmIns);
+                                            mDatabase.child(post_key).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    if (task.isSuccessful()) {
+                                                        Toast.makeText(getApplicationContext(), "Data Updated", Toast.LENGTH_SHORT).show();
+                                                        dialog.dismiss();
+                                                    } else {
+                                                        Toast.makeText(ControlMeasuresActivity.this, " Failed.", Toast.LENGTH_SHORT).show();
+                                                        dialog.dismiss();
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    });
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
+                                    dialog.dismiss();
+                                }
+                            });
+                } else {
+                    Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
+                    dialog.dismiss();
+                }
             }
         });
 
@@ -305,5 +507,6 @@ public class ControlMeasuresActivity extends AppCompatActivity {
 
         dialog.show();
     }
-
+    //guide untuk spinner
+    //https://www.mkyong.com/android/android-spinner-drop-down-list-example/
 }
