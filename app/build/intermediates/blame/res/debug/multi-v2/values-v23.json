@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\89fa10c7bfc32c91670b27b1caa68637\\cardview-1.0.0-rc01\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\bd8c39381bec3d93cf2a09b9a8c3f1d2\\cardview-1.0.0-rc01\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\8b7353a4da394401f2770946eabec9bd\\appcompat-1.1.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\53af1f37d65227eb5bcf361cc28c52ea\\appcompat-1.1.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",

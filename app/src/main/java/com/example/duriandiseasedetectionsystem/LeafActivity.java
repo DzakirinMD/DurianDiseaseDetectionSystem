@@ -88,7 +88,7 @@ public class LeafActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_durian);
+        setContentView(R.layout.activity_leaf);
 
         //Setup Custom toolbar
         toolbar = findViewById(R.id.toolbar_home);

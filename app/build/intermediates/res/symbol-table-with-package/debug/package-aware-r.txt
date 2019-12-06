@@ -857,6 +857,8 @@ dimen abc_text_size_subhead_material
 dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
 dimen bottom_sheet_corner_radius
 dimen bottom_sheet_top_padding
 dimen cardview_compat_inset_shadow
@@ -1186,6 +1188,12 @@ id CTRL
 id CropOverlayView
 id CropProgressBar
 id FUNCTION
+id Farmer_address
+id Farmer_email
+id Farmer_id
+id Farmer_name
+id Farmer_notel
+id Farmer_pass
 id ImageView_image
 id META
 id SHIFT
@@ -1435,6 +1443,7 @@ id profilePic
 id profilePicDash
 id profilePicProfile
 id profiledashtxt
+id progressBar
 id progress_bar
 id progress_circular
 id progress_horizontal
@@ -1490,12 +1499,6 @@ id spread_inside
 id src_atop
 id src_in
 id src_over
-id staff_address
-id staff_email
-id staff_id
-id staff_name
-id staff_notel
-id staff_pass
 id standard
 id start
 id status_bar_latest_event_content
@@ -1518,7 +1521,6 @@ id textSpacerNoTitle
 id textStart
 id textView
 id textView2
-id textView3
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1631,9 +1633,14 @@ layout activity_control_measures
 layout activity_dashboard
 layout activity_disease
 layout activity_durian
+layout activity_farmer_control_measures
 layout activity_farmer_dashboard
+layout activity_farmer_disease
+layout activity_farmer_durian
+layout activity_farmer_leaf
 layout activity_farmer_view_profile
 layout activity_leaf
+layout activity_login
 layout activity_main
 layout activity_registration
 layout activity_scan_disease
@@ -1668,7 +1675,7 @@ layout item_data
 layout item_data_control_measures
 layout item_data_disease
 layout item_data_leaf
-layout item_data_list_staff
+layout item_data_list_farmer
 layout layout_bottom_sheet
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1728,6 +1735,8 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_sign_in
+string action_sign_in_short
 string activity_name_detection
 string app_name
 string appbar_scrolling_view_behavior
@@ -1773,6 +1782,9 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
+string invalid_password
+string invalid_username
+string login_failed
 string mtrl_chip_close_icon_content_description
 string password_toggle_content_description
 string path_password_eye
@@ -1781,9 +1793,13 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string pick_image_intent_chooser_title
 string project_id
+string prompt_email
+string prompt_password
 string request_permission
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_activity_login
+string welcome
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

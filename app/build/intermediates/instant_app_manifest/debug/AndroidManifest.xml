@@ -29,14 +29,19 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.duriandiseasedetectionsystem.FarmerDashboardActivity" />
-        <activity android:name="com.example.duriandiseasedetectionsystem.FarmerViewProfile" />
+        <activity android:name="com.example.duriandiseasedetectionsystem.LoginActivity" />
+        <activity android:name="com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerControlMeasuresActivity" />
+        <activity android:name="com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerDiseaseActivity" />
+        <activity android:name="com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerLeafActivity" />
+        <activity android:name="com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerDurianActivity" />
+        <activity android:name="com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerViewProfileActivity" />
+        <activity android:name="com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerDashboardActivity" />
+        <activity android:name="com.example.duriandiseasedetectionsystem.ViewProfile" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
         <activity android:name="com.example.duriandiseasedetectionsystem.Search" />
         <activity android:name="com.example.duriandiseasedetectionsystem.UserListActivity" />
-        <activity android:name="com.example.duriandiseasedetectionsystem.StaffViewProfile" />
         <activity android:name="com.example.duriandiseasedetectionsystem.ScanDiseaseActivity" />
         <activity android:name="com.example.duriandiseasedetectionsystem.LeafActivity" />
         <activity android:name="com.example.duriandiseasedetectionsystem.ControlMeasuresActivity" />
@@ -91,6 +96,12 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.example.duriandiseasedetectionsystem.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
     </application>
 
 </manifest>

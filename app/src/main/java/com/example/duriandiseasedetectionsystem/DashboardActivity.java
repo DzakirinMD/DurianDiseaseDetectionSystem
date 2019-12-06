@@ -79,6 +79,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         //check id sapa tengah login sekarang
         System.out.println("/n/n Current user is : " + identifier);
+        System.out.println("WELCOME TO DASHBOARD ACTIVITY" );
 
         profileImage = findViewById(R.id.profilePicDash);
         profiledashtxt = findViewById(R.id.profiledashtxt);
@@ -127,13 +128,13 @@ public class DashboardActivity extends AppCompatActivity {
         profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), FarmerViewProfile.class));
+                startActivity(new Intent(getApplicationContext(), ViewProfile.class));
             }
         });
         profiledashtxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), FarmerViewProfile.class));
+                startActivity(new Intent(getApplicationContext(), ViewProfile.class));
             }
         });
         // END of Profile text or img
@@ -214,12 +215,6 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
-        search_something.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Search.class));
-            }
-        });
 
     } // END of Oncreate
 
@@ -239,7 +234,7 @@ public class DashboardActivity extends AppCompatActivity {
             case R.id.logout:
                 //function untuk signed out
                 mAuth.signOut();
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 break;
         }
 

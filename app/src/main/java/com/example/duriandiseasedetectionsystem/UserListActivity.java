@@ -9,8 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.duriandiseasedetectionsystem.model.ControlMeasures;
-import com.example.duriandiseasedetectionsystem.model.Staff;
+import com.example.duriandiseasedetectionsystem.model.Farmer;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -57,7 +56,7 @@ public class UserListActivity extends AppCompatActivity {
         //mDatabase = FirebaseDatabase.getInstance().getReference().child("TaskNote").child(uID);
         //mDatabase.keepSynced(true); //keep synced ni untuk VIEW data recycler.. kalau nk INSERT data xyah letak ni lagi
         //yg bawah ni dy x simpan sapa yg create note tu
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Staff");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Farmer");
         mDatabase.keepSynced(true); //keep synced ni untuk VIEW data recycler.. kalau nk INSERT data xyah letak ni lagi
 
         //Recyler.........................
@@ -80,22 +79,22 @@ public class UserListActivity extends AppCompatActivity {
         super.onStart();
 
         //nak guna firebaserecyleradapter kena letak compile 'com.firebaseui:firebase-ui-database:0.4.0' kat  build.gradle (module:app)
-        FirebaseRecyclerAdapter<Staff, UserListActivity.MyViewHolder> adapter = new FirebaseRecyclerAdapter<Staff, UserListActivity.MyViewHolder>(
-                Staff.class,  //Name of model class
-                R.layout.item_data_list_staff, //Row layout to show data
+        FirebaseRecyclerAdapter<Farmer, UserListActivity.MyViewHolder> adapter = new FirebaseRecyclerAdapter<Farmer, MyViewHolder>(
+                Farmer.class,  //Name of model class
+                R.layout.item_data_list_farmer, //Row layout to show data
                 UserListActivity.MyViewHolder.class, //Name of viewholder class
                 mDatabase // Database Reference
         ) {
             @Override
-            protected void populateViewHolder(UserListActivity.MyViewHolder viewHolder, final Staff model, final int position) {
+            protected void populateViewHolder(UserListActivity.MyViewHolder viewHolder, final Farmer model, final int position) {
 
                 //Your Method to load Data
-                viewHolder.setStaffID(model.getStaffID());
-                viewHolder.setStaffName(model.getStaffName());
-                viewHolder.setStaffAddress(model.getStaffAddress());
-                viewHolder.setStaffNoTel(model.getStaffNoTel());
-                viewHolder.setStaffEmail(model.getStaffEmail());
-                viewHolder.setStaffPassword(model.getStaffPassword());
+                viewHolder.setFarmerID(model.getFarmerID());
+                viewHolder.setFarmerName(model.getFarmerName());
+                viewHolder.setFarmerAddress(model.getFarmerAddress());
+                viewHolder.setFarmerNoTel(model.getFarmerNoTel());
+                viewHolder.setFarmerEmail(model.getFarmerEmail());
+                viewHolder.setFarmerPassword(model.getFarmerPassword());
 
 
                 // Setting bila click kat card2 recycler view tu nk jadi apa
@@ -133,36 +132,36 @@ public class UserListActivity extends AppCompatActivity {
         }
 
         //Semua R.id. bawah ni ambik dari item_data.xml
-        public void setStaffID(String lsID){
-            TextView lID = myview.findViewById(R.id.staff_id);
+        public void setFarmerID(String lsID){
+            TextView lID = myview.findViewById(R.id.Farmer_id);
             //nak tukar texview kepada value dari database
             lID.setText(lsID);
         }
 
-        public void setStaffName(String lsName){
-            TextView lName = myview.findViewById(R.id.staff_name);
+        public void setFarmerName(String lsName){
+            TextView lName = myview.findViewById(R.id.Farmer_name);
             lName.setText(lsName);
         }
 
-        public void setStaffAddress(String lsAddress){
-            TextView lAddress = myview.findViewById(R.id.staff_address);
+        public void setFarmerAddress(String lsAddress){
+            TextView lAddress = myview.findViewById(R.id.Farmer_address);
             //nak tukar texview kepada value dari database
             lAddress.setText(lsAddress);
         }
 
-        public void setStaffNoTel(String lsNotel){
-            TextView lNotel = myview.findViewById(R.id.staff_notel);
+        public void setFarmerNoTel(String lsNotel){
+            TextView lNotel = myview.findViewById(R.id.Farmer_notel);
             lNotel.setText(lsNotel);
         }
 
-        public void setStaffEmail(String lsEmail){
-            TextView lEmail = myview.findViewById(R.id.staff_email);
+        public void setFarmerEmail(String lsEmail){
+            TextView lEmail = myview.findViewById(R.id.Farmer_email);
             //nak tukar texview kepada value dari database
             lEmail.setText(lsEmail);
         }
 
-        public void setStaffPassword(String lsPassword){
-            TextView lPassword = myview.findViewById(R.id.staff_pass);
+        public void setFarmerPassword(String lsPassword){
+            TextView lPassword = myview.findViewById(R.id.Farmer_pass);
             lPassword.setText(lsPassword);
         }
 

@@ -1,16 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".FarmerDashboardActivity">
+<!--    tools:srcCompat="@tools:sample/avatars[0]"-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@drawable/backgrounddesign"
+tools:context=".FarmerActivity.FarmerDashboardActivity">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="FARMER DASHBOARD"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="288dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:orientation="vertical">
+
+        <!--    cara nk include toolbar-->
+        <include layout="@layout/toolbar"
+            android:id="@+id/toolbar_home"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePicDash"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/default_user"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="2dp"
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <TextView
+            android:id="@+id/profiledashtxt"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Profile"
+            android:background="@drawable/editdesign"
+            android:gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <!--        Gambar 2nd line-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="149dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/duriandashimg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:clickable="true"
+                app:srcCompat="@drawable/durian" />
+
+            <ImageView
+                android:id="@+id/leafdashimg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:clickable="true"
+                app:srcCompat="@drawable/leaf" />
+
+        </LinearLayout>
+
+        <!--    Text untuk gambar 2nd line-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/duriandashtxt"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/editdesign"
+                android:text="Durian" />
+
+            <TextView
+                android:id="@+id/leafdashtxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/editdesign"
+                android:text="Leaf" />
+        </LinearLayout>
+
+        <!--        Gambar 3nd line-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/cmdasboardimg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:clickable="true"
+                app:srcCompat="@drawable/controlmeasures" />
+
+            <ImageView
+                android:id="@+id/diseasedashboardimg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:clickable="true"
+                app:srcCompat="@drawable/disease" />
+
+        </LinearLayout>
+
+        <!--    Text untuk gambar 2nd line-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cmdasboardtxt"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/editdesign"
+                android:text="Control Measures" />
+
+            <TextView
+                android:id="@+id/diseasedashboardtxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/editdesign"
+                android:text="Disease" />
+        </LinearLayout>
+
+        <!--    Text untuk gambar 3rd line-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/scan_disease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editdesign"
+            android:text="Scan Disease" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+
+</LinearLayout>
+
+

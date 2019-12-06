@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\43d10548910a2686de65fd51b2206c0d\\material-1.0.0-rc01\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\42dfa75dd97f65b6f13ab377026b4c61\\material-1.0.0-rc01\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\8b7353a4da394401f2770946eabec9bd\\appcompat-1.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\53af1f37d65227eb5bcf361cc28c52ea\\appcompat-1.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

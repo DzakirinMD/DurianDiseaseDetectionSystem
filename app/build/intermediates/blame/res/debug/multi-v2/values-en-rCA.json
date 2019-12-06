@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\kirin\\Desktop\\Sem_6_UITM\\Backup System\\DurianDiseaseDetectionSystem\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rCA\\values-en-rCA.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\8b7353a4da394401f2770946eabec9bd\\appcompat-1.1.0\\res\\values-en-rCA\\values-en-rCA.xml",
+                    "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\53af1f37d65227eb5bcf361cc28c52ea\\appcompat-1.1.0\\res\\values-en-rCA\\values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\478b79604eaaf934858ce3739dce1708\\core-1.1.0\\res\\values-en-rCA\\values-en-rCA.xml",
+                    "source": "C:\\Users\\kirin\\.gradle\\caches\\transforms-2\\files-2.1\\e91594602c73eba9f0c6fb1745d43dba\\core-1.1.0\\res\\values-en-rCA\\values-en-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

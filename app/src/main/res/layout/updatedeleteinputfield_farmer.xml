@@ -19,7 +19,7 @@
                 android:background="@drawable/backgrounddesign"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="Update Staff"
+                android:text="Update Farmer"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black" />
 
@@ -180,23 +180,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
-
-                    <Button
-                        android:id="@+id/btn_delete_upd"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/btndesign"
-                        android:text="DELETE"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@android:color/white" />
-
-                </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="0dp"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/backgrounddesign"
     android:orientation="vertical"
-    tools:context=".StaffViewProfile">
+    tools:context=".FarmerViewProfile">
 
     <RelativeLayout
         android:layout_width="match_parent"
