@@ -17,15 +17,12 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.webkit.MimeTypeMap;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.duriandiseasedetectionsystem.model.Durian;
 import com.example.duriandiseasedetectionsystem.model.Leaf;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -35,21 +32,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
-import com.theartofdev.edmodo.cropper.CropImage;
-import com.theartofdev.edmodo.cropper.CropImageView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class LeafActivity extends AppCompatActivity {
@@ -140,8 +128,8 @@ public class LeafActivity extends AppCompatActivity {
                 //apa function layout inflater https://stackoverflow.com/questions/3477422/what-does-layoutinflater-in-android-do
                 // LayoutInflater is used to create a new View (or Layout) object from one of your xml layouts.
                 LayoutInflater inflater = LayoutInflater.from(LeafActivity.this);
-                //lepas inflate letak xml view mana yg nk di letak (custominputfield yg sendiri design)
-                View myview = inflater.inflate(R.layout.custominputfield_leaf, null);
+                //lepas inflate letak xml view mana yg nk di letak (create_durian yg sendiri design)
+                View myview = inflater.inflate(R.layout.create_leaf, null);
                 //massukan view tu dalam alert dialog
                 myDialog.setView(myview);
                 //nak sambungkan 2 input field dalam custom dialog tu dan create dialog tu
@@ -159,7 +147,7 @@ public class LeafActivity extends AppCompatActivity {
                         Intent intent = new Intent();
                         intent.setType("image/*");
                         intent.setAction(Intent.ACTION_GET_CONTENT);
-                        startActivityForResult(Intent.createChooser(intent,"Select Picture"), PICK_IMAGE_REQUEST);
+                        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
                         //This will go to onActivityResult()
                     }
                 });
@@ -179,7 +167,7 @@ public class LeafActivity extends AppCompatActivity {
                         String userID = user.getUid();
 
                         // Error Checking
-                        if (TextUtils.isEmpty(leafChar)){
+                        if (TextUtils.isEmpty(leafChar)) {
                             addLChr.setError("Characteristic is required..");
                             return;
                         }
@@ -200,20 +188,10 @@ public class LeafActivity extends AppCompatActivity {
                                                 public void onSuccess(Uri uri) {
                                                     Uri downloadUrl = uri;
 
-                                                    //Put user id into FarmerID and push all info into db
-                                                    Leaf data = new Leaf(leafID, downloadUrl.toString(), leafChar);
-                                                    mDatabase.child(leafID).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                        @Override
-                                                        public void onComplete(@NonNull Task<Void> task) {
-                                                            if (task.isSuccessful()) {
-                                                                Toast.makeText(getApplicationContext(), "Successfully Added", Toast.LENGTH_SHORT).show();
-                                                                dialog.dismiss();
-                                                            } else {
-                                                                Toast.makeText(LeafActivity.this, "Failed.", Toast.LENGTH_SHORT).show();
-                                                                dialog.dismiss();
-                                                            }
-                                                        }
-                                                    });
+                                                    //call method to create data
+                                                    createLeaf(leafID, downloadUrl.toString(), leafChar);
+                                                    dialog.dismiss();
+
                                                 }
                                             });
                                         }
@@ -221,12 +199,12 @@ public class LeafActivity extends AppCompatActivity {
                                     .addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(getApplicationContext(),"Failed to load Image", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(getApplicationContext(), "Failed to load Image", Toast.LENGTH_LONG).show();
                                             dialog.dismiss();
                                         }
                                     });
                         } else {
-                            Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "No file selected", Toast.LENGTH_LONG).show();
                             dialog.dismiss();
                         }
                     }
@@ -246,7 +224,7 @@ public class LeafActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        switch(PICK_IMAGE_REQUEST) {
+        switch (PICK_IMAGE_REQUEST) {
             case 1:
                 if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
 
@@ -277,24 +255,24 @@ public class LeafActivity extends AppCompatActivity {
     //START OF VIEW
 
     //Recycler view punya class dan view holder adapter
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         private Context context;
         View myview;
 
-        public MyViewHolder (View itemView){
+        public MyViewHolder(View itemView) {
             super(itemView);
             myview = itemView;
         }
 
         //Semua R.id. bawah ni ambik dari item_data.xml
-        public void setLeafImage(String name){
+        public void setLeafImage(String name) {
             ImageView imageView = (ImageView) myview.findViewById(R.id.leaf_img_view);
             //nak tukar texview kepada value dari database
             Picasso.with(context).load(name).into(imageView);
         }
 
-        public void setleafCharacteristics(String characteristic){
+        public void setleafCharacteristics(String characteristic) {
             TextView mChar = myview.findViewById(R.id.leaf_characteristic_view);
             mChar.setText(characteristic);
         }
@@ -347,20 +325,34 @@ public class LeafActivity extends AppCompatActivity {
     }
     //On Start End
 
+    private void createLeaf(String leafID, String leafImg, String leafChar) {
+
+        Leaf data = new Leaf(leafID, leafImg, leafChar);
+        mDatabase.child(leafID).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(getApplicationContext(), "Successfully Added", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(LeafActivity.this, "Failed.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
 
 
     //untuk update data dan show dialog dia
-    public void  updateDeleteData(){
+    public void updateDeleteData() {
 
         AlertDialog.Builder mydialog = new AlertDialog.Builder(LeafActivity.this);
         LayoutInflater inflater = LayoutInflater.from(LeafActivity.this);
 
-        View myview = inflater.inflate(R.layout.updatedeleteinputfield_leaf, null);
+        View myview = inflater.inflate(R.layout.updatedelete_leaf, null);
         mydialog.setView(myview);
 
         final AlertDialog dialog = mydialog.create();
 
-        //collect data from field of updatedeleteinputfield
+        //collect data from field of updatedelete_durian
         updateLChr = myview.findViewById(R.id.upd_leaf_characteristic);
         updateLImage = myview.findViewById(R.id.update_leaf_img);
 
@@ -379,7 +371,7 @@ public class LeafActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent,"Select Picture"), PICK_IMAGE_REQUEST);
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
                 //This will go to onActivityResult()
             }
         });
@@ -432,12 +424,12 @@ public class LeafActivity extends AppCompatActivity {
                             .addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), "No file selected", Toast.LENGTH_LONG).show();
                                     dialog.dismiss();
                                 }
                             });
                 } else {
-                    Toast.makeText(getApplicationContext(),"Please enter an image", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Please enter an image", Toast.LENGTH_LONG).show();
                     dialog.dismiss();
                 }
 

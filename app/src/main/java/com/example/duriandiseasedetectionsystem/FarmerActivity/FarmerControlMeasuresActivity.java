@@ -117,6 +117,8 @@ public class FarmerControlMeasuresActivity extends AppCompatActivity {
         //Recyler.........................
         recyclerView = findViewById(R.id.recyler);
 
+        System.out.println("Successfully Populate CM Data");
+
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         layoutManager.setReverseLayout(true);
@@ -152,13 +154,6 @@ public class FarmerControlMeasuresActivity extends AppCompatActivity {
                 break;
         }
     }
-
-    private String getFileExtension(Uri uri) {
-        ContentResolver cR = getContentResolver();
-        MimeTypeMap mime = MimeTypeMap.getSingleton();
-        return mime.getExtensionFromMimeType(cR.getType(uri));
-    }
-
 
     //START OF VIEW
 
@@ -226,7 +221,6 @@ public class FarmerControlMeasuresActivity extends AppCompatActivity {
                 viewHolder.setCmInstruction(model.getCmInstruction());
                 viewHolder.setCMImage(model.getCmImage());
 
-
             }
         };
 
@@ -234,7 +228,4 @@ public class FarmerControlMeasuresActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
     //On Start End
-
-
-
 }

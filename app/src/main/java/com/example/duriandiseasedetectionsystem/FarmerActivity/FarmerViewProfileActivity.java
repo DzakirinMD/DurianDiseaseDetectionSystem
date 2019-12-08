@@ -36,6 +36,7 @@ public class FarmerViewProfileActivity extends AppCompatActivity {
     private CircleImageView profilePic;
     private String mImageUrl;
     private Button mEditButton;
+    private AlertDialog dialog;
 
     //Update input field...
     private TextView updateSEmail;
@@ -65,11 +66,12 @@ public class FarmerViewProfileActivity extends AppCompatActivity {
         //ambik current user yg tengah login
         FirebaseUser mUser = mAuth.getCurrentUser();
         //amik user punya id/email
+        farmerID = mUser.getUid();
         final String uID = mUser.getUid();
         String identifier = mUser.getEmail();
 
         //check id sapa tengah login sekarang
-        System.out.println("/n/n Current Farmer ID is : " + uID);
+        System.out.println("/n/n Current Farmer ID is : " + farmerID);
         System.out.println("/n/n Current Farmer user is : " + identifier);
         mProfileRef.child("Farmer").child(mAuth.getUid());
 
@@ -84,9 +86,9 @@ public class FarmerViewProfileActivity extends AppCompatActivity {
         mEditButton = findViewById(R.id.updateBtn);
 
         //Call View Profile Method
-        ViewProfile();
+        viewProfile();
 
-        //Inflate updatedeleteinputfield_farmer
+        //Inflate update_farmer
         mEditButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,12 +97,12 @@ public class FarmerViewProfileActivity extends AppCompatActivity {
                 AlertDialog.Builder mydialog = new AlertDialog.Builder(FarmerViewProfileActivity.this);
                 LayoutInflater inflater = LayoutInflater.from(FarmerViewProfileActivity.this);
 
-                View myview = inflater.inflate(R.layout.updatedeleteinputfield_farmer, null);
+                View myview = inflater.inflate(R.layout.update_farmer, null);
                 mydialog.setView(myview);
 
                 final AlertDialog dialog = mydialog.create();
 
-                //collect data from field of updatedeleteinputfield
+                //collect data from field of updatedelete_durian
                 updateSEmail = myview.findViewById(R.id.upd_farmer_email);
                 //for email Read only
                 updateSEmail.setEnabled(false);
@@ -109,10 +111,9 @@ public class FarmerViewProfileActivity extends AppCompatActivity {
                 updateSAdd = myview.findViewById(R.id.upd_farmer_address);
 
                 //instantiate button
-                btnDeleteUp = myview.findViewById(R.id.btn_delete_upd);
                 btnUpdateUp = myview.findViewById(R.id.btn_update_upd);
 
-                //Load data into updatedeleteinputfield_farmer
+                //Load data into update_farmer
                 updateSEmail.setText(farmerEmail);
                 updateSPass.setText(farmerPassword);
                 updateSNotel.setText(farmerNoTel);
@@ -152,46 +153,27 @@ public class FarmerViewProfileActivity extends AppCompatActivity {
                                     System.out.println("New Email is : " + newEmail);
                                     System.out.println("New password :" + newPass);
 
-                                    //Call model constructor
-                                    Farmer data = new Farmer(uID,farmerName,add,notel,newEmail,farmerRole,ImageUrl,newPass);
-                                    //masuk kan value dalam id tu (position dy)
-                                    mProfileRef.child("Farmer").child(uID).setValue(data);
+                                    updateProfile(uID,farmerName,add,notel,newEmail,farmerRole,ImageUrl,newPass);
 
-
-                                    //Update Password
-                                    FirebaseUser updPass = FirebaseAuth.getInstance().getCurrentUser();
-                                    String newPassword = newPass;
-
-                                    updPass.updatePassword(newPassword)
-                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<Void> task) {
-                                                    if (task.isSuccessful()) {
-                                                        System.out.println("Update password jadi");
-                                                        startActivity(new Intent(getApplicationContext(), FarmerViewProfileActivity.class));
-                                                    }
-                                                }
-                                            });
 
                                     Toast.makeText(getApplicationContext(),"Data Updated", Toast.LENGTH_SHORT).show();
                                     dialog.dismiss();
                                 }
                             });
-
                         }
                     }
-
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
                         Toast.makeText(getApplicationContext(), "Failed to read value.", Toast.LENGTH_SHORT).show();
                     }
                 });
+
                 dialog.show();
             }
         });
     } // End of On Create
 
-    private void ViewProfile() {
+    private void viewProfile() {
 
         mProfileRef.child("Farmer").child(mAuth.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
@@ -229,4 +211,29 @@ public class FarmerViewProfileActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void updateProfile(String uID, String farmerName, String add, String notel, String newEmail, String farmerRole, String ImageUrl, String newPass){
+
+        //Call model constructor
+        Farmer data = new Farmer(uID,farmerName,add,notel,newEmail,farmerRole,ImageUrl,newPass);
+        //masuk kan value dalam id tu (position dy)
+        mProfileRef.child("Farmer").child(uID).setValue(data);
+
+
+        //Update Password
+        FirebaseUser updPass = FirebaseAuth.getInstance().getCurrentUser();
+        String newPassword = newPass;
+
+        updPass.updatePassword(newPassword)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            System.out.println("Update password jadi");
+                            startActivity(new Intent(getApplicationContext(), FarmerViewProfileActivity.class));
+                        }
+                    }
+                });
+    }
+
 }

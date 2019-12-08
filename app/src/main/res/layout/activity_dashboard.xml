@@ -64,7 +64,7 @@
                 <ImageView
                     android:id="@+id/leafdashimg"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="3"
                     android:clickable="true"
                     app:srcCompat="@drawable/leaf" />
@@ -79,9 +79,10 @@
 
                 <TextView
                     android:id="@+id/duriandashtxt"
-                    android:layout_width="190dp"
+                    android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:padding="5dp"
                     android:background="@drawable/editdesign"
                     android:text="Durian" />
 
@@ -90,11 +91,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:padding="5dp"
                     android:background="@drawable/editdesign"
                     android:text="Leaf" />
             </LinearLayout>
 
-            <!--        Gambar 3nd line-->
+            <!-- Gambar 3nd line-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="113dp"
@@ -112,7 +114,7 @@
                 <ImageView
                     android:id="@+id/diseasedashboardimg"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="3"
                     android:clickable="true"
                     app:srcCompat="@drawable/disease" />
@@ -127,9 +129,10 @@
 
                 <TextView
                     android:id="@+id/cmdasboardtxt"
-                    android:layout_width="190dp"
+                    android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:padding="5dp"
                     android:background="@drawable/editdesign"
                     android:text="Control Measures" />
 
@@ -138,6 +141,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:padding="5dp"
                     android:background="@drawable/editdesign"
                     android:text="Disease" />
             </LinearLayout>
@@ -168,12 +172,6 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/editdesign"
                 android:text="User List" />
-            <Button
-                android:id="@+id/search_something"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/editdesign"
-                android:text="Searc" />
 
 
             <LinearLayout

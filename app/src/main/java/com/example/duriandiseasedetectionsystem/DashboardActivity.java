@@ -36,7 +36,7 @@ public class DashboardActivity extends AppCompatActivity {
     private ImageView duriandashboardimg, leafdashboardimg, diseasedashboardimg, cmdasboardimg;
     private TextView duriandashboardtxt, leafdashboardtxt, diseasedashboardtxt, cmdasboardtxt, profiledashtxt;
 
-    private Button scanBtn, usrListBtn, search_something;
+    private Button scanBtn, usrListBtn;
 
     // kena import import androidx.appcompat.widget.Toolbar; sebab guna androidX
     private Toolbar toolbar;
@@ -98,8 +98,6 @@ public class DashboardActivity extends AppCompatActivity {
 
         scanBtn = findViewById(R.id.scan_disease);
         usrListBtn = findViewById(R.id.user_list_btn);
-
-        search_something = findViewById(R.id.search_something);
 
         mDatabase.child("Farmer").child(uID).addValueEventListener(new ValueEventListener() {
             @Override
@@ -167,7 +165,7 @@ public class DashboardActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), LeafActivity.class));
             }
         });
-        // END of LEAFF text or img
+        // END of LEAF text or img
 
         //Click link DISEASE text or img
         diseasedashboardtxt.setOnClickListener(new View.OnClickListener() {

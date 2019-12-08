@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerViewProfileActivity;
 import com.example.duriandiseasedetectionsystem.model.Farmer;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -85,7 +86,7 @@ public class ViewProfile extends AppCompatActivity {
         //Call View Profile Method
         ViewProfile();
 
-        //Inflate updatedeleteinputfield_farmer
+        //Inflate update_farmer
         mEditButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,12 +95,12 @@ public class ViewProfile extends AppCompatActivity {
                 AlertDialog.Builder mydialog = new AlertDialog.Builder(ViewProfile.this);
                 LayoutInflater inflater = LayoutInflater.from(ViewProfile.this);
 
-                View myview = inflater.inflate(R.layout.updatedeleteinputfield_farmer, null);
+                View myview = inflater.inflate(R.layout.update_farmer, null);
                 mydialog.setView(myview);
 
                 final AlertDialog dialog = mydialog.create();
 
-                //collect data from field of updatedeleteinputfield
+                //collect data from field of updatedelete_durian
                 updateSEmail = myview.findViewById(R.id.upd_farmer_email);
                 //for email Read only
                 updateSEmail.setEnabled(false);
@@ -110,7 +111,7 @@ public class ViewProfile extends AppCompatActivity {
                 //instantiate button
                 btnUpdateUp = myview.findViewById(R.id.btn_update_upd);
 
-                //Load data into updatedeleteinputfield_farmer
+                //Load data into update_farmer
                 updateSEmail.setText(farmerEmail);
                 updateSPass.setText(farmerPassword);
                 updateSNotel.setText(farmerNoTel);
@@ -150,35 +151,14 @@ public class ViewProfile extends AppCompatActivity {
                                     System.out.println("New Email is : " + newEmail);
                                     System.out.println("New password :" + newPass);
 
-                                    //Call model constructor
-                                    Farmer data = new Farmer(uID,farmerName,add,notel,newEmail,farmerRole,ImageUrl,newPass);
-                                    //masuk kan value dalam id tu (position dy)
-                                    mProfileRef.child("Farmer").child(uID).setValue(data);
-
-
-                                    //Update Password
-                                    FirebaseUser updPass = FirebaseAuth.getInstance().getCurrentUser();
-                                    String newPassword = newPass;
-
-                                    updPass.updatePassword(newPassword)
-                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<Void> task) {
-                                                    if (task.isSuccessful()) {
-                                                        System.out.println("Update password jadi");
-                                                        startActivity(new Intent(getApplicationContext(), ViewProfile.class));
-                                                    }
-                                                }
-                                            });
+                                    updateProfile(uID,farmerName,add,notel,newEmail,farmerRole,ImageUrl,newPass);
 
                                     Toast.makeText(getApplicationContext(),"Data Updated", Toast.LENGTH_SHORT).show();
                                     dialog.dismiss();
                                 }
                             });
-
                         }
                     }
-
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
                         Toast.makeText(getApplicationContext(), "Failed to read value.", Toast.LENGTH_SHORT).show();
@@ -228,6 +208,31 @@ public class ViewProfile extends AppCompatActivity {
             }
         });
     }
+
+    private void updateProfile(String uID, String farmerName, String add, String notel, String newEmail, String farmerRole, String ImageUrl, String newPass){
+
+        //Call model constructor
+        Farmer data = new Farmer(uID,farmerName,add,notel,newEmail,farmerRole,ImageUrl,newPass);
+        //masuk kan value dalam id tu (position dy)
+        mProfileRef.child("Farmer").child(uID).setValue(data);
+
+
+        //Update Password
+        FirebaseUser updPass = FirebaseAuth.getInstance().getCurrentUser();
+        String newPassword = newPass;
+
+        updPass.updatePassword(newPassword)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            System.out.println("Update password jadi");
+                            startActivity(new Intent(getApplicationContext(), ViewProfile.class));
+                        }
+                    }
+                });
+    }
+
 
 }
 

@@ -39,9 +39,7 @@
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
-        <activity android:name="com.example.duriandiseasedetectionsystem.Search" />
         <activity android:name="com.example.duriandiseasedetectionsystem.UserListActivity" />
-        <activity android:name="com.example.duriandiseasedetectionsystem.ScanDiseaseActivity" />
         <activity android:name="com.example.duriandiseasedetectionsystem.LeafActivity" />
         <activity android:name="com.example.duriandiseasedetectionsystem.ControlMeasuresActivity" />
         <activity android:name="com.example.duriandiseasedetectionsystem.DiseaseActivity" />

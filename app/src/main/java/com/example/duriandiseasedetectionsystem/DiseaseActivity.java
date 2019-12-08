@@ -25,7 +25,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.duriandiseasedetectionsystem.model.Disease;
-import com.example.duriandiseasedetectionsystem.model.Leaf;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -135,8 +134,8 @@ public class DiseaseActivity extends AppCompatActivity {
                 //apa function layout inflater https://stackoverflow.com/questions/3477422/what-does-layoutinflater-in-android-do
                 // LayoutInflater is used to create a new View (or Layout) object from one of your xml layouts.
                 LayoutInflater inflater = LayoutInflater.from(DiseaseActivity.this);
-                //lepas inflate letak xml view mana yg nk di letak (custominputfield yg sendiri design)
-                View myview = inflater.inflate(R.layout.custominputfield_disease, null);
+                //lepas inflate letak xml view mana yg nk di letak (create_durian yg sendiri design)
+                View myview = inflater.inflate(R.layout.create_disease, null);
                 //massukan view tu dalam alert dialog
                 myDialog.setView(myview);
                 //nak sambungkan 2 input field dalam custom dialog tu dan create dialog tu
@@ -156,7 +155,7 @@ public class DiseaseActivity extends AppCompatActivity {
                         Intent intent = new Intent();
                         intent.setType("image/*");
                         intent.setAction(Intent.ACTION_GET_CONTENT);
-                        startActivityForResult(Intent.createChooser(intent,"Select Picture"), PICK_IMAGE_REQUEST);
+                        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
                         //This will go to onActivityResult()
                     }
                 });
@@ -172,11 +171,11 @@ public class DiseaseActivity extends AppCompatActivity {
                         String diseaseSymptom = add_disease_symptoms.getText().toString().trim();
 
                         // Error Checking
-                        if (TextUtils.isEmpty(diseaseName)){
+                        if (TextUtils.isEmpty(diseaseName)) {
                             add_disease_name.setError("Name is required..");
                             return;
                         }
-                        if (TextUtils.isEmpty(diseaseSymptom)){
+                        if (TextUtils.isEmpty(diseaseSymptom)) {
                             add_disease_symptoms.setError("Symptoms is required..");
                             return;
                         }
@@ -197,20 +196,10 @@ public class DiseaseActivity extends AppCompatActivity {
                                                 public void onSuccess(Uri uri) {
                                                     Uri downloadUrl = uri;
 
-                                                    //Put user id into FarmerID and push all info into db
-                                                    Disease data = new Disease(diseaseID, diseaseName, diseaseSeverity, diseaseSymptom, downloadUrl.toString());
-                                                    mDatabase.child(diseaseID).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                        @Override
-                                                        public void onComplete(@NonNull Task<Void> task) {
-                                                            if (task.isSuccessful()) {
-                                                                Toast.makeText(getApplicationContext(), "Successfully Added", Toast.LENGTH_SHORT).show();
-                                                                dialog.dismiss();
-                                                            } else {
-                                                                Toast.makeText(DiseaseActivity.this, "Failed.", Toast.LENGTH_SHORT).show();
-                                                                dialog.dismiss();
-                                                            }
-                                                        }
-                                                    });
+                                                    //call method to create data
+                                                    createDisease(diseaseID, diseaseName, diseaseSeverity, diseaseSymptom, downloadUrl.toString());
+                                                    dialog.dismiss();
+
                                                 }
                                             });
                                         }
@@ -218,12 +207,12 @@ public class DiseaseActivity extends AppCompatActivity {
                                     .addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(getApplicationContext(),"Failed to load Image", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(getApplicationContext(), "Failed to load Image", Toast.LENGTH_LONG).show();
                                             dialog.dismiss();
                                         }
                                     });
                         } else {
-                            Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "No file selected", Toast.LENGTH_LONG).show();
                             dialog.dismiss();
                         }
 
@@ -245,7 +234,7 @@ public class DiseaseActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        switch(PICK_IMAGE_REQUEST) {
+        switch (PICK_IMAGE_REQUEST) {
             case 1:
                 if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
 
@@ -275,37 +264,37 @@ public class DiseaseActivity extends AppCompatActivity {
     //START OF VIEW
 
     //Recycler view punya class dan view holder adapter
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         private Context context;
         View myview;
 
-        public MyViewHolder (View itemView){
+        public MyViewHolder(View itemView) {
             super(itemView);
             myview = itemView;
         }
 
         //Semua R.id. bawah ni ambik dari item_data.xml
-        public void setdName(String name){
+        public void setdName(String name) {
             TextView mName = myview.findViewById(R.id.disease_name_view);
             //nak tukar texview kepada value dari database
             mName.setText(name);
         }
 
-        public void setdSeverity(int Severity){
+        public void setdSeverity(int Severity) {
             TextView mSeverity = myview.findViewById(R.id.disease_severity_view);
             mSeverity.setText(Integer.toString(Severity));
             //pakai integer.tostring sbb nk convert int to string
         }
 
         //Semua R.id. bawah ni ambik dari item_data.xml
-        public void setdImage(String name){
+        public void setdImage(String name) {
             ImageView imageView = (ImageView) myview.findViewById(R.id.disease_img_view);
             //nak tukar texview kepada value dari database
             Picasso.with(context).load(name).into(imageView);
         }
 
-        public void setdSymptoms(String Symptoms){
+        public void setdSymptoms(String Symptoms) {
             TextView mSymptoms = myview.findViewById(R.id.disease_symptoms_view);
             mSymptoms.setText(Symptoms);
         }
@@ -361,20 +350,33 @@ public class DiseaseActivity extends AppCompatActivity {
     }
     //On Start End
 
+    private void createDisease(String diseaseID, String diseaseName, int diseaseSeverity, String diseaseSymptom, String diseaseImage) {
 
+        Disease data = new Disease(diseaseID, diseaseName, diseaseSeverity, diseaseSymptom, diseaseImage);
+        mDatabase.child(diseaseID).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(getApplicationContext(), "Successfully Added", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(DiseaseActivity.this, "Failed.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
 
     //untuk update data dan show dialog dia
-    public void  updateDeleteData(){
+    public void updateDeleteData() {
 
         AlertDialog.Builder mydialog = new AlertDialog.Builder(DiseaseActivity.this);
         LayoutInflater inflater = LayoutInflater.from(DiseaseActivity.this);
 
-        View myview = inflater.inflate(R.layout.updatedeleteinputfield_disease, null);
+        View myview = inflater.inflate(R.layout.updatedelete_disease, null);
         mydialog.setView(myview);
 
         final AlertDialog dialog = mydialog.create();
 
-        //collect data from field of updatedeleteinputfield
+        //collect data from field of updatedelete_durian
         updateDiseaseName = myview.findViewById(R.id.upd_disease_name);
         seekBarupdateDiseaseSeverity = myview.findViewById(R.id.seekBar_upd_disease_severity);
         updateDiseaseSym = myview.findViewById(R.id.upd_disease_symptoms);
@@ -401,7 +403,7 @@ public class DiseaseActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent,"Select Picture"), PICK_IMAGE_REQUEST);
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
                 //This will go to onActivityResult()
             }
         });
@@ -457,12 +459,12 @@ public class DiseaseActivity extends AppCompatActivity {
                             .addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), "No file selected", Toast.LENGTH_LONG).show();
                                     dialog.dismiss();
                                 }
                             });
                 } else {
-                    Toast.makeText(getApplicationContext(),"Please enter an image", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Please enter an image", Toast.LENGTH_LONG).show();
                     dialog.dismiss();
                 }
             }

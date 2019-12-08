@@ -13,7 +13,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,12 +35,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
-import com.theartofdev.edmodo.cropper.CropImage;
-import com.theartofdev.edmodo.cropper.CropImageView;
 
 
 public class DurianActivity extends AppCompatActivity {
@@ -104,7 +100,6 @@ public class DurianActivity extends AppCompatActivity {
         System.out.println("/n/n Current user is : " + identifier);
 
 
-
         // connect dengan database dan create table name. kalau nama table dh ada dy akan masukkan terus data
         //mDatabase = FirebaseDatabase.getInstance().getReference().child("TaskNote").child(uID);
         //mDatabase.keepSynced(true); //keep synced ni untuk VIEW data recycler.. kalau nk INSERT data xyah letak ni lagi
@@ -139,8 +134,8 @@ public class DurianActivity extends AppCompatActivity {
                 //apa function layout inflater https://stackoverflow.com/questions/3477422/what-does-layoutinflater-in-android-do
                 // LayoutInflater is used to create a new View (or Layout) object from one of your xml layouts.
                 LayoutInflater inflater = LayoutInflater.from(DurianActivity.this);
-                //lepas inflate letak xml view mana yg nk di letak (custominputfield yg sendiri design)
-                View myview = inflater.inflate(R.layout.custominputfield, null);
+                //lepas inflate letak xml view mana yg nk di letak (create_durian yg sendiri design)
+                View myview = inflater.inflate(R.layout.create_durian, null);
                 //massukan view tu dalam alert dialog
                 myDialog.setView(myview);
                 //nak sambungkan 2 input field dalam custom dialog tu dan create dialog tu
@@ -160,7 +155,7 @@ public class DurianActivity extends AppCompatActivity {
                         Intent intent = new Intent();
                         intent.setType("image/*");
                         intent.setAction(Intent.ACTION_GET_CONTENT);
-                        startActivityForResult(Intent.createChooser(intent,"Select Picture"), PICK_IMAGE_REQUEST);
+                        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
                         //This will go to onActivityResult()
                     }
                 });
@@ -182,17 +177,17 @@ public class DurianActivity extends AppCompatActivity {
                         String userID = user.getUid();
 
                         // Error Checking
-                        if (TextUtils.isEmpty(durianName)){
+                        if (TextUtils.isEmpty(durianName)) {
                             adddurianName.setError("Name is required..");
                             return;
                         }
 
-                        if (TextUtils.isEmpty(dSpec)){
+                        if (TextUtils.isEmpty(dSpec)) {
                             addDSpc.setError("Species is required..");
                             return;
                         }
 
-                        if (TextUtils.isEmpty(dChar)){
+                        if (TextUtils.isEmpty(dChar)) {
                             addDChr.setError("Characteristic is required..");
                             return;
                         }
@@ -213,20 +208,10 @@ public class DurianActivity extends AppCompatActivity {
                                                 public void onSuccess(Uri uri) {
                                                     Uri downloadUrl = uri;
 
-                                                    //Put user id into FarmerID and push all info into db
-                                                    Durian data = new Durian(durianID, durianName, dSpec, downloadUrl.toString(), dChar, uID);
-                                                    mDatabase.child(durianID).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                        @Override
-                                                        public void onComplete(@NonNull Task<Void> task) {
-                                                            if (task.isSuccessful()) {
-                                                                Toast.makeText(getApplicationContext(), "Successfully Added", Toast.LENGTH_SHORT).show();
-                                                                dialog.dismiss();
-                                                            } else {
-                                                                Toast.makeText(DurianActivity.this, " Failed.", Toast.LENGTH_SHORT).show();
-                                                                dialog.dismiss();
-                                                            }
-                                                        }
-                                                    });
+                                                    //call method to create data
+                                                    createDurian(durianID, durianName, dSpec, downloadUrl.toString(), dChar, uID);
+                                                    dialog.dismiss();
+
                                                 }
                                             });
                                         }
@@ -234,12 +219,12 @@ public class DurianActivity extends AppCompatActivity {
                                     .addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(getApplicationContext(),"Failed to load Image", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(getApplicationContext(), "Failed to load Image", Toast.LENGTH_LONG).show();
                                             dialog.dismiss();
                                         }
                                     });
                         } else {
-                            Toast.makeText(getApplicationContext(),"Please enter an image", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Please enter an image", Toast.LENGTH_LONG).show();
                             dialog.dismiss();
                         }
                     }
@@ -259,7 +244,7 @@ public class DurianActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        switch(PICK_IMAGE_REQUEST) {
+        switch (PICK_IMAGE_REQUEST) {
             case 1:
                 if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
 
@@ -286,7 +271,6 @@ public class DurianActivity extends AppCompatActivity {
     }
 
 
-    //START OF VIEW
     //Adapter
     @Override
     protected void onStart() {
@@ -336,54 +320,71 @@ public class DurianActivity extends AppCompatActivity {
     //On Start End
 
     //Recycler view punya class dan view holder
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         private Context context;
         View myview;
 
-        public MyViewHolder (View itemView){
+        public MyViewHolder(View itemView) {
             super(itemView);
             myview = itemView;
         }
 
         //Semua R.id. bawah ni ambik dari item_data.xml
-        public void setdurianName(String name){
+        public void setdurianName(String name) {
             TextView mName = myview.findViewById(R.id.name);
             //nak tukar texview kepada value dari database
             mName.setText(name);
         }
 
         //Semua R.id. bawah ni ambik dari item_data.xml
-        public void setDurianImage(String name){
+        public void setDurianImage(String name) {
             ImageView imageView = (ImageView) myview.findViewById(R.id.durian_view);
             //nak tukar texview kepada value dari database
             Picasso.with(context).load(name).into(imageView);
         }
 
-        public void setdurianSpecies(String species){
+        public void setdurianSpecies(String species) {
             TextView mSpecies = myview.findViewById(R.id.species);
             mSpecies.setText(species);
         }
 
-        public void setdurianCharacteristic(String characteristic){
+        public void setdurianCharacteristic(String characteristic) {
             TextView mChar = myview.findViewById(R.id.characteristic);
             mChar.setText(characteristic);
         }
     }
     // end of recylerview class
 
+    private void createDurian(String durianID, String durianName, String dSpec, String durianImg, String dChar, String uID) {
+
+        Durian data = new Durian(durianID, durianName, dSpec, durianImg, dChar, uID);
+        mDatabase.child(durianID).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(getApplicationContext(), "Successfully Added", Toast.LENGTH_SHORT).show();
+
+                } else {
+                    Toast.makeText(DurianActivity.this, " Failed.", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+    }
+
     //untuk update data dan show dialog dia
-    public void  updateDeleteData(){
+    public void updateDeleteData() {
 
         AlertDialog.Builder mydialog = new AlertDialog.Builder(DurianActivity.this);
         LayoutInflater inflater = LayoutInflater.from(DurianActivity.this);
 
-        View myview = inflater.inflate(R.layout.updatedeleteinputfield, null);
+        View myview = inflater.inflate(R.layout.updatedelete_durian, null);
         mydialog.setView(myview);
 
         final AlertDialog dialog = mydialog.create();
 
-        //collect data from field of updatedeleteinputfield
+        //collect data from field of updatedelete_durian
         updateDImg = myview.findViewById(R.id.upd_durian_img);
         updatedurianName = myview.findViewById(R.id.upd_durian_name);
         updateDSpc = myview.findViewById(R.id.upd_durian_species);
@@ -409,7 +410,7 @@ public class DurianActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent,"Select Picture"), PICK_IMAGE_REQUEST);
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
                 //This will go to onActivityResult()
             }
         });
@@ -466,12 +467,12 @@ public class DurianActivity extends AppCompatActivity {
                             .addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), "No file selected", Toast.LENGTH_LONG).show();
                                     dialog.dismiss();
                                 }
                             });
                 } else {
-                    Toast.makeText(getApplicationContext(),"No file selected", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "No file selected", Toast.LENGTH_LONG).show();
                     dialog.dismiss();
                 }
             }

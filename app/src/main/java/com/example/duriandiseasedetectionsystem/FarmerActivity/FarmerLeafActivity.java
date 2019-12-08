@@ -132,8 +132,8 @@ public class FarmerLeafActivity extends AppCompatActivity {
                 //apa function layout inflater https://stackoverflow.com/questions/3477422/what-does-layoutinflater-in-android-do
                 // LayoutInflater is used to create a new View (or Layout) object from one of your xml layouts.
                 LayoutInflater inflater = LayoutInflater.from(FarmerLeafActivity.this);
-                //lepas inflate letak xml view mana yg nk di letak (custominputfield yg sendiri design)
-                View myview = inflater.inflate(R.layout.custominputfield_leaf, null);
+                //lepas inflate letak xml view mana yg nk di letak (create_durian yg sendiri design)
+                View myview = inflater.inflate(R.layout.create_leaf, null);
                 //massukan view tu dalam alert dialog
                 myDialog.setView(myview);
                 //nak sambungkan 2 input field dalam custom dialog tu dan create dialog tu
@@ -192,20 +192,10 @@ public class FarmerLeafActivity extends AppCompatActivity {
                                                 public void onSuccess(Uri uri) {
                                                     Uri downloadUrl = uri;
 
-                                                    //Put user id into FarmerID and push all info into db
-                                                    Leaf data = new Leaf(leafID, downloadUrl.toString(), leafChar);
-                                                    mDatabase.child(leafID).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                        @Override
-                                                        public void onComplete(@NonNull Task<Void> task) {
-                                                            if (task.isSuccessful()) {
-                                                                Toast.makeText(getApplicationContext(), "Successfully Added", Toast.LENGTH_SHORT).show();
-                                                                dialog.dismiss();
-                                                            } else {
-                                                                Toast.makeText(FarmerLeafActivity.this, "Failed.", Toast.LENGTH_SHORT).show();
-                                                                dialog.dismiss();
-                                                            }
-                                                        }
-                                                    });
+                                                    //call method to create data
+                                                    createLeaf(leafID, downloadUrl.toString(), leafChar);
+                                                    dialog.dismiss();
+
                                                 }
                                             });
                                         }
@@ -294,7 +284,6 @@ public class FarmerLeafActivity extends AppCompatActivity {
     }
     // end of recylerview class
 
-
     //untuk automatic fetch data dari database
     @Override
     protected void onStart() {
@@ -322,5 +311,20 @@ public class FarmerLeafActivity extends AppCompatActivity {
         //run recycler view
         recyclerView.setAdapter(adapter);
     }//On Start End
+
+    private void createLeaf(String leafID, String leafImage, String leafChar){
+
+        Leaf data = new Leaf(leafID, leafImage, leafChar);
+        mDatabase.child(leafID).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(getApplicationContext(), "Successfully Added", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(FarmerLeafActivity.this, "Failed.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
 
 }
