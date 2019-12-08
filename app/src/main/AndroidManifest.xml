@@ -24,9 +24,9 @@
         <activity android:name=".FarmerActivity.FarmerDiseaseActivity" />
         <activity android:name=".FarmerActivity.FarmerLeafActivity" />
         <activity android:name=".FarmerActivity.FarmerDurianActivity" />
-        <activity android:name=".FarmerActivity.FarmerViewProfileActivity" />
+        <activity android:name=".FarmerActivity.FarmerActivity" />
         <activity android:name=".FarmerActivity.FarmerDashboardActivity" />
-        <activity android:name=".ViewProfile" />
+        <activity android:name=".AdminActivity" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />

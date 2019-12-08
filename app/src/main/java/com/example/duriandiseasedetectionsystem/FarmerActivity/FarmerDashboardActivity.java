@@ -14,14 +14,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.duriandiseasedetectionsystem.ControlMeasuresActivity;
 import com.example.duriandiseasedetectionsystem.DetectorActivity;
-import com.example.duriandiseasedetectionsystem.DiseaseActivity;
-import com.example.duriandiseasedetectionsystem.DurianActivity;
 import com.example.duriandiseasedetectionsystem.LoginActivity;
-import com.example.duriandiseasedetectionsystem.ViewProfile;
-import com.example.duriandiseasedetectionsystem.LeafActivity;
-import com.example.duriandiseasedetectionsystem.MainActivity;
 import com.example.duriandiseasedetectionsystem.R;
 import com.example.duriandiseasedetectionsystem.model.Farmer;
 import com.google.firebase.auth.FirebaseAuth;
@@ -133,13 +127,13 @@ public class FarmerDashboardActivity extends AppCompatActivity {
         profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), FarmerViewProfileActivity.class));
+                startActivity(new Intent(getApplicationContext(), FarmerActivity.class));
             }
         });
         profiledashtxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), FarmerViewProfileActivity.class));
+                startActivity(new Intent(getApplicationContext(), FarmerActivity.class));
             }
         });
         // END of Profile text or img

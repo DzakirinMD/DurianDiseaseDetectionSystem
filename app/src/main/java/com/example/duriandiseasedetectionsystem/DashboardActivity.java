@@ -126,13 +126,13 @@ public class DashboardActivity extends AppCompatActivity {
         profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ViewProfile.class));
+                startActivity(new Intent(getApplicationContext(), AdminActivity.class));
             }
         });
         profiledashtxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ViewProfile.class));
+                startActivity(new Intent(getApplicationContext(), AdminActivity.class));
             }
         });
         // END of Profile text or img

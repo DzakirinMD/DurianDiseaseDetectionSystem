@@ -1,8 +1,9 @@
-package com.example.duriandiseasedetectionsystem.FarmerActivity;
+package com.example.duriandiseasedetectionsystem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +14,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.duriandiseasedetectionsystem.R;
 import com.example.duriandiseasedetectionsystem.model.Farmer;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -28,7 +28,7 @@ import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class FarmerViewProfileActivity extends AppCompatActivity {
+public class AdminActivity extends AppCompatActivity {
 
     private TextView viewName, viewEmail, viewPhone, viewPass, viewAddress;
     private FirebaseAuth mAuth;
@@ -36,14 +36,12 @@ public class FarmerViewProfileActivity extends AppCompatActivity {
     private CircleImageView profilePic;
     private String mImageUrl;
     private Button mEditButton;
-    private AlertDialog dialog;
 
     //Update input field...
     private TextView updateSEmail;
     private EditText updateSPass;
     private EditText updateSNotel;
     private EditText updateSAdd;
-    private Button btnDeleteUp;
     private Button btnUpdateUp;
 
     private String farmerID;
@@ -66,12 +64,11 @@ public class FarmerViewProfileActivity extends AppCompatActivity {
         //ambik current user yg tengah login
         FirebaseUser mUser = mAuth.getCurrentUser();
         //amik user punya id/email
-        farmerID = mUser.getUid();
         final String uID = mUser.getUid();
         String identifier = mUser.getEmail();
 
         //check id sapa tengah login sekarang
-        System.out.println("/n/n Current Farmer ID is : " + farmerID);
+        System.out.println("/n/n Current Farmer ID is : " + uID);
         System.out.println("/n/n Current Farmer user is : " + identifier);
         mProfileRef.child("Farmer").child(mAuth.getUid());
 
@@ -86,7 +83,7 @@ public class FarmerViewProfileActivity extends AppCompatActivity {
         mEditButton = findViewById(R.id.updateBtn);
 
         //Call View Profile Method
-        viewProfile();
+        ViewProfile();
 
         //Inflate update_farmer
         mEditButton.setOnClickListener(new View.OnClickListener() {
@@ -94,8 +91,8 @@ public class FarmerViewProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 //Edit Farmer
-                AlertDialog.Builder mydialog = new AlertDialog.Builder(FarmerViewProfileActivity.this);
-                LayoutInflater inflater = LayoutInflater.from(FarmerViewProfileActivity.this);
+                AlertDialog.Builder mydialog = new AlertDialog.Builder(AdminActivity.this);
+                LayoutInflater inflater = LayoutInflater.from(AdminActivity.this);
 
                 View myview = inflater.inflate(R.layout.update_farmer, null);
                 mydialog.setView(myview);
@@ -155,7 +152,6 @@ public class FarmerViewProfileActivity extends AppCompatActivity {
 
                                     updateProfile(uID,farmerName,add,notel,newEmail,farmerRole,ImageUrl,newPass);
 
-
                                     Toast.makeText(getApplicationContext(),"Data Updated", Toast.LENGTH_SHORT).show();
                                     dialog.dismiss();
                                 }
@@ -173,7 +169,7 @@ public class FarmerViewProfileActivity extends AppCompatActivity {
         });
     } // End of On Create
 
-    private void viewProfile() {
+    private void ViewProfile() {
 
         mProfileRef.child("Farmer").child(mAuth.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
@@ -230,10 +226,12 @@ public class FarmerViewProfileActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             System.out.println("Update password jadi");
-                            startActivity(new Intent(getApplicationContext(), FarmerViewProfileActivity.class));
+                            startActivity(new Intent(getApplicationContext(), AdminActivity.class));
                         }
                     }
                 });
     }
 
+
 }
+
