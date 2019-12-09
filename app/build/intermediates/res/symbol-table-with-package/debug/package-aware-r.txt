@@ -1637,7 +1637,6 @@ layout activity_leaf
 layout activity_login
 layout activity_main
 layout activity_registration
-layout activity_staff_view_profile
 layout activity_user_list
 layout camera_connection_fragment
 layout camera_connection_fragment_tracking

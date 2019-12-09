@@ -32,7 +32,7 @@ public class FarmerActivity extends AppCompatActivity {
 
     private TextView viewName, viewEmail, viewPhone, viewPass, viewAddress;
     private FirebaseAuth mAuth;
-    private DatabaseReference mProfileRef;
+        private DatabaseReference mProfileRef;
     private CircleImageView profilePic;
     private String mImageUrl;
     private Button mEditButton;

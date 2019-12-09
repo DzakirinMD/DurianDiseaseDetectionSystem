@@ -34,9 +34,9 @@
         <activity android:name="com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerDiseaseActivity" />
         <activity android:name="com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerLeafActivity" />
         <activity android:name="com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerDurianActivity" />
-        <activity android:name="com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerViewProfileActivity" />
+        <activity android:name="com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerActivity" />
         <activity android:name="com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerDashboardActivity" />
-        <activity android:name="com.example.duriandiseasedetectionsystem.ViewProfile" />
+        <activity android:name="com.example.duriandiseasedetectionsystem.AdminActivity" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />

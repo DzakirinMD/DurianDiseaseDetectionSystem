@@ -292,18 +292,18 @@ activity#com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerDurianAct
 ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:26:9-73
 	android:name
 		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:26:19-70
-activity#com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerViewProfileActivity
-ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:27:9-78
+activity#com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerActivity
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:27:9-67
 	android:name
-		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:27:19-75
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:27:19-64
 activity#com.example.duriandiseasedetectionsystem.FarmerActivity.FarmerDashboardActivity
 ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:28:9-76
 	android:name
 		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:28:19-73
-activity#com.example.duriandiseasedetectionsystem.ViewProfile
-ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:29:9-49
+activity#com.example.duriandiseasedetectionsystem.AdminActivity
+ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:29:9-51
 	android:name
-		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:29:19-46
+		ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:29:19-48
 activity#com.theartofdev.edmodo.cropper.CropImageActivity
 ADDED from C:\Users\kirin\Desktop\Sem_6_UITM\Backup System\DurianDiseaseDetectionSystem\app\src\main\AndroidManifest.xml:30:9-32:59
 	android:theme
