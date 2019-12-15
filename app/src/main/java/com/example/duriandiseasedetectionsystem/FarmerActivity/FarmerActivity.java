@@ -36,14 +36,12 @@ public class FarmerActivity extends AppCompatActivity {
     private CircleImageView profilePic;
     private String mImageUrl;
     private Button mEditButton;
-    private AlertDialog dialog;
 
     //Update input field...
     private TextView updateSEmail;
     private EditText updateSPass;
     private EditText updateSNotel;
     private EditText updateSAdd;
-    private Button btnDeleteUp;
     private Button btnUpdateUp;
 
     private String farmerID;
@@ -52,7 +50,6 @@ public class FarmerActivity extends AppCompatActivity {
     private String farmerNoTel;
     private String farmerEmail;
     private String farmerRole;
-    private String farmerImage;
     private String farmerPassword;
 
     @Override

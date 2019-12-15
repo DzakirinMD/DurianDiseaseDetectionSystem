@@ -8,11 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1f8d03a8-849e-4466-9d7a-64c56d08e3a9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_staff_view_profile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/RegistrationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/RegistrationActivity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,24 +34,20 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerLeafActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
-              <caret line="34" column="45" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="45" />
+            <state relative-caret-position="352">
+              <caret line="284" column="31" selection-start-line="284" selection-start-column="31" selection-end-line="284" selection-end-column="31" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#onActivityResult#0;class#FarmerLeafActivity#0" />
+                <element signature="method#getFileExtension#0;class#FarmerLeafActivity#0" />
+                <element signature="class#MyViewHolder#0;class#FarmerLeafActivity#0" />
+                <element signature="method#MyViewHolder#0;class#MyViewHolder#0;class#FarmerLeafActivity#0" />
+                <element signature="method#onStart#0;class#FarmerLeafActivity#0" />
+                <element signature="method#createLeaf#0;class#FarmerLeafActivity#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerDurianActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="224" column="34" selection-start-line="224" selection-start-column="20" selection-end-line="224" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -57,75 +55,135 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerDiseaseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="207" column="45" selection-start-line="207" selection-start-column="27" selection-end-line="207" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerDashboardActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="82" column="8" lean-forward="true" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerLeafActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="284" column="31" lean-forward="true" selection-start-line="284" selection-start-column="31" selection-end-line="284" selection-end-column="31" />
+            <state relative-caret-position="1581">
+              <caret line="207" column="106" selection-start-line="207" selection-start-column="99" selection-end-line="207" selection-end-column="106" />
               <folding>
-                <element signature="method#onActivityResult#0;class#FarmerLeafActivity#0" />
-                <element signature="method#getFileExtension#0;class#FarmerLeafActivity#0" />
-                <element signature="class#MyViewHolder#0;class#FarmerLeafActivity#0" />
-                <element signature="method#MyViewHolder#0;class#MyViewHolder#0;class#FarmerLeafActivity#0" />
-                <element signature="method#onStart#0;class#FarmerLeafActivity#0" />
+                <element signature="method#onActivityResult#0;class#FarmerDiseaseActivity#0" />
+                <element signature="method#getFileExtension#0;class#FarmerDiseaseActivity#0" />
+                <element signature="class#MyViewHolder#0;class#FarmerDiseaseActivity#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerControlMeasuresActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Disease.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="202" column="13" lean-forward="true" selection-start-line="202" selection-start-column="13" selection-end-line="202" selection-end-column="13" />
+            <state relative-caret-position="-374">
+              <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+              <folding>
+                <element signature="e#655#656#0" expanded="true" />
+                <element signature="e#687#688#0" expanded="true" />
+                <element signature="e#737#738#0" expanded="true" />
+                <element signature="e#779#780#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+                <element signature="e#851#852#0" expanded="true" />
+                <element signature="e#905#906#0" expanded="true" />
+                <element signature="e#951#952#0" expanded="true" />
+                <element signature="e#990#991#0" expanded="true" />
+                <element signature="e#1028#1029#0" expanded="true" />
+                <element signature="e#1087#1088#0" expanded="true" />
+                <element signature="e#1141#1142#0" expanded="true" />
+                <element signature="e#1183#1184#0" expanded="true" />
+                <element signature="e#1221#1222#0" expanded="true" />
+                <element signature="e#1376#1377#0" expanded="true" />
+                <element signature="e#1411#1412#0" expanded="true" />
+                <element signature="e#1467#1468#0" expanded="true" />
+                <element signature="e#1515#1516#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DiseaseActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="365" column="5" lean-forward="true" selection-start-line="365" selection-start-column="5" selection-end-line="365" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#onActivityResult#0;class#DiseaseActivity#0" />
+                <element signature="method#getFileExtension#0;class#DiseaseActivity#0" />
+                <element signature="class#MyViewHolder#0;class#DiseaseActivity#0" />
+                <element signature="method#onStart#0;class#DiseaseActivity#0" />
+                <element signature="method#createDisease#0;class#DiseaseActivity#0" />
+                <element signature="method#updateDeleteData#0;class#DiseaseActivity#0" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_bottom_sheet.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="93" column="43" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="43" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DashboardActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="136" column="11" lean-forward="true" selection-start-line="136" selection-start-column="11" selection-end-line="136" selection-end-column="11" />
+            <state relative-caret-position="471">
+              <caret line="387" column="36" selection-start-line="387" selection-start-column="36" selection-end-line="387" selection-end-column="36" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#onActivityResult#0;class#ControlMeasuresActivity#0" />
+                <element signature="method#getFileExtension#0;class#ControlMeasuresActivity#0" />
+                <element signature="class#MyViewHolder#0;class#ControlMeasuresActivity#0" />
+                <element signature="method#onStart#0;class#ControlMeasuresActivity#0" />
+                <element signature="method#createControlMeasures#0;class#ControlMeasuresActivity#0" />
+                <element signature="method#updateDeleteData#0;class#ControlMeasuresActivity#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_view_profile.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DetectorActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1311">
+              <caret line="209" column="60" selection-start-line="209" selection-start-column="38" selection-end-line="209" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/AdminActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1637">
+              <caret line="58" column="60" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#ViewProfile#0;class#AdminActivity#0" />
+                <element signature="method#updateProfile#0;class#AdminActivity#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_disease.xml">
           <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/RegistrationActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+              <folding>
+                <element signature="e#4259#4260#0" expanded="true" />
+                <element signature="e#4301#4302#0" expanded="true" />
+                <element signature="method#onActivityResult#0;class#RegistrationActivity#0" />
+                <element signature="method#getFileExtension#0;class#RegistrationActivity#0" />
+                <element signature="method#Register#0;class#RegistrationActivity#0" />
+                <element signature="method#createUser#0;class#RegistrationActivity#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="155" column="12" selection-start-line="155" selection-start-column="12" selection-end-line="155" selection-end-column="12" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -142,8 +200,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ExampleItem</find>
-      <find>filterList</find>
       <find>adapter</find>
       <find>mAdapter</find>
       <find>mExampleList</find>
@@ -172,6 +228,8 @@
       <find>ViewProfile</find>
       <find>Current</find>
       <find>populateViewHolder</find>
+      <find>populate</find>
+      <find>TF_OD_API_MODEL_FILE</find>
     </findStrings>
     <replaceStrings>
       <replace>durianID</replace>
@@ -208,7 +266,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_view_profile.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Farmer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/StaffViewProfile.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/RegistrationActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerViewProfile.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/updatedeleteinputfield_farmer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/UserListActivity.java" />
@@ -221,11 +278,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_durian.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerDurianActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/Search.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_scan_disease.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DetectorActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_dashboard.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerControlMeasuresActivity.java" />
@@ -240,14 +295,17 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DiseaseActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerLeafActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/create_control_measures.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerDurianActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DetectorActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/RegistrationActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="210" />
+    <option name="y" value="-18" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -256,9 +314,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -306,6 +363,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -437,7 +495,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
@@ -452,19 +510,19 @@
       <window_info anchor="bottom" id="Logcat" order="0" />
       <window_info anchor="bottom" id="TODO" order="1" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50159913" side_tool="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50159913" side_tool="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32932165" />
       <window_info anchor="bottom" id="Version Control" order="5" />
       <window_info anchor="bottom" id="Android Profiler" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.33044422" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.33369803" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49840087" weight="0.40520042" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49840087" visible="true" weight="0.40086675" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.30277187" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.30170575" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Assistant" order="6" weight="0.32889125" />
     </layout>
@@ -503,49 +561,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Created upload image into profile" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/ScanDiseaseActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_durian.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/animal.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_camera.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/CameraActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8007">
-          <caret line="534" column="30" selection-start-line="534" selection-start-column="17" selection-end-line="534" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_user_list.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/UserListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1214">
@@ -563,44 +578,160 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="138" column="16" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_dashboard.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
           <caret line="109" column="22" lean-forward="true" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/update_farmer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="189" column="55" selection-start-line="189" selection-start-column="41" selection-end-line="189" selection-end-column="55" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/example_item.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_data_list_farmer.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/camera_connection_fragment.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-272" />
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/camera_connection_fragment_tracking.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_leaf.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_leaf.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedelete_control_measures.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedelete_disease.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedelete_leaf.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_control_measures.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_disease.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_staff_view_profile.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/create_control_measures.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="167" column="20" selection-start-line="167" selection-start-column="20" selection-end-line="167" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_data.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_control_measures.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerDashboardActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerControlMeasuresActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2737">
+          <caret line="202" column="13" selection-start-line="202" selection-start-column="13" selection-end-line="202" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_bottom_sheet.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="93" column="43" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Farmer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Leaf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/ControlMeasures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DashboardActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1291">
+          <caret line="126" column="21" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Durian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_camera.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -609,50 +740,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Farmer.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="17" />
+        <state relative-caret-position="357">
+          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Durian.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_view_profile.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="160">
+          <caret line="147" column="8" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_leaf.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/update_farmer.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="193" column="36" lean-forward="true" selection-start-line="193" selection-start-column="36" selection-end-line="193" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1845">
+          <caret line="211" column="30" selection-start-line="211" selection-start-column="17" selection-end-line="211" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#viewProfile#0;class#FarmerActivity#0" />
+            <element signature="method#updateProfile#0;class#FarmerActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/create_durian.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_leaf.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_durian.xml">
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Leaf.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerDurianActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="323">
+          <caret line="76" column="33" lean-forward="true" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DetectorActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_durian.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
+        <state relative-caret-position="160">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedelete_durian.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DurianActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="484" column="56" lean-forward="true" selection-start-line="484" selection-start-column="16" selection-end-line="484" selection-end-column="56" />
+          <folding>
+            <element signature="method#onActivityResult#0;class#DurianActivity#0" />
+            <element signature="method#getFileExtension#0;class#DurianActivity#0" />
+            <element signature="method#onStart#0;class#DurianActivity#0" />
+            <element signature="class#MyViewHolder#0;class#DurianActivity#0" />
+            <element signature="method#createDurian#0;class#DurianActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/LeafActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="344" column="35" lean-forward="true" selection-start-line="344" selection-start-column="35" selection-end-line="344" selection-end-column="35" />
+          <folding>
+            <element signature="method#onActivityResult#0;class#LeafActivity#0" />
+            <element signature="method#getFileExtension#0;class#LeafActivity#0" />
+            <element signature="class#MyViewHolder#0;class#LeafActivity#0" />
+            <element signature="method#onStart#0;class#LeafActivity#0" />
+            <element signature="method#updateDeleteData#0;class#LeafActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DiseaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="365" column="5" lean-forward="true" selection-start-line="365" selection-start-column="5" selection-end-line="365" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#onActivityResult#0;class#DiseaseActivity#0" />
+            <element signature="method#getFileExtension#0;class#DiseaseActivity#0" />
+            <element signature="class#MyViewHolder#0;class#DiseaseActivity#0" />
+            <element signature="method#onStart#0;class#DiseaseActivity#0" />
+            <element signature="method#createDisease#0;class#DiseaseActivity#0" />
+            <element signature="method#updateDeleteData#0;class#DiseaseActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="155" column="12" selection-start-line="155" selection-start-column="12" selection-end-line="155" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerLeafActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="284" column="31" selection-start-line="284" selection-start-column="31" selection-end-line="284" selection-end-column="31" />
+          <folding>
+            <element signature="method#onActivityResult#0;class#FarmerLeafActivity#0" />
+            <element signature="method#getFileExtension#0;class#FarmerLeafActivity#0" />
+            <element signature="class#MyViewHolder#0;class#FarmerLeafActivity#0" />
+            <element signature="method#MyViewHolder#0;class#MyViewHolder#0;class#FarmerLeafActivity#0" />
+            <element signature="method#onStart#0;class#FarmerLeafActivity#0" />
+            <element signature="method#createLeaf#0;class#FarmerLeafActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/AdminActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1637">
+          <caret line="58" column="60" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ViewProfile#0;class#AdminActivity#0" />
+            <element signature="method#updateProfile#0;class#AdminActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_disease.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/tracking/MultiBoxTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/model/Disease.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="-374">
+          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
           <folding>
             <element signature="e#655#656#0" expanded="true" />
             <element signature="e#687#688#0" expanded="true" />
@@ -676,218 +919,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedelete_control_measures.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerDiseaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedelete_durian.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedelete_disease.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/updatedelete_leaf.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/LeafActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="346" column="39" selection-start-line="346" selection-start-column="39" selection-end-line="346" selection-end-column="39" />
+        <state relative-caret-position="1581">
+          <caret line="207" column="106" selection-start-line="207" selection-start-column="99" selection-end-line="207" selection-end-column="106" />
           <folding>
-            <element signature="method#onActivityResult#0;class#LeafActivity#0" />
-            <element signature="method#getFileExtension#0;class#LeafActivity#0" />
-            <element signature="class#MyViewHolder#0;class#LeafActivity#0" />
-            <element signature="method#onStart#0;class#LeafActivity#0" />
-            <element signature="method#updateDeleteData#0;class#LeafActivity#0" />
+            <element signature="method#onActivityResult#0;class#FarmerDiseaseActivity#0" />
+            <element signature="method#getFileExtension#0;class#FarmerDiseaseActivity#0" />
+            <element signature="class#MyViewHolder#0;class#FarmerDiseaseActivity#0" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DurianActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="358" column="11" selection-start-line="358" selection-start-column="11" selection-end-line="358" selection-end-column="11" />
-          <folding>
-            <element signature="method#onActivityResult#0;class#DurianActivity#0" />
-            <element signature="method#getFileExtension#0;class#DurianActivity#0" />
-            <element signature="method#onStart#0;class#DurianActivity#0" />
-            <element signature="class#MyViewHolder#0;class#DurianActivity#0" />
-            <element signature="method#updateDeleteData#0;class#DurianActivity#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DiseaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="306" column="13" lean-forward="true" selection-start-line="306" selection-start-column="13" selection-end-line="306" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#onActivityResult#0;class#DiseaseActivity#0" />
-            <element signature="method#getFileExtension#0;class#DiseaseActivity#0" />
-            <element signature="class#MyViewHolder#0;class#DiseaseActivity#0" />
-            <element signature="method#onStart#0;class#DiseaseActivity#0" />
-            <element signature="method#updateDeleteData#0;class#DiseaseActivity#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registration.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_control_measures.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/RegistrationActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="909">
-          <caret line="214" column="17" selection-start-line="214" selection-start-column="17" selection-end-line="214" selection-end-column="29" />
+        <state relative-caret-position="216">
+          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+          <folding>
+            <element signature="e#4259#4260#0" expanded="true" />
+            <element signature="e#4301#4302#0" expanded="true" />
+            <element signature="method#onActivityResult#0;class#RegistrationActivity#0" />
+            <element signature="method#getFileExtension#0;class#RegistrationActivity#0" />
+            <element signature="method#Register#0;class#RegistrationActivity#0" />
+            <element signature="method#createUser#0;class#RegistrationActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DetectorActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="209" column="60" selection-start-line="209" selection-start-column="38" selection-end-line="209" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/ControlMeasuresActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="694">
-          <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+        <state relative-caret-position="471">
+          <caret line="387" column="36" selection-start-line="387" selection-start-column="36" selection-end-line="387" selection-end-column="36" />
           <folding>
             <element signature="method#onActivityResult#0;class#ControlMeasuresActivity#0" />
             <element signature="method#getFileExtension#0;class#ControlMeasuresActivity#0" />
             <element signature="class#MyViewHolder#0;class#ControlMeasuresActivity#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_disease.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_view_profile.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_staff_view_profile.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/create_control_measures.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="167" column="20" selection-start-line="167" selection-start-column="20" selection-end-line="167" selection-end-column="20" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_data.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_farmer_control_measures.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_bottom_sheet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="93" column="43" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="43" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="34" column="45" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerLeafActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="284" column="31" lean-forward="true" selection-start-line="284" selection-start-column="31" selection-end-line="284" selection-end-column="31" />
-          <folding>
-            <element signature="method#onActivityResult#0;class#FarmerLeafActivity#0" />
-            <element signature="method#getFileExtension#0;class#FarmerLeafActivity#0" />
-            <element signature="class#MyViewHolder#0;class#FarmerLeafActivity#0" />
-            <element signature="method#MyViewHolder#0;class#MyViewHolder#0;class#FarmerLeafActivity#0" />
-            <element signature="method#onStart#0;class#FarmerLeafActivity#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerDurianActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="224" column="34" selection-start-line="224" selection-start-column="20" selection-end-line="224" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerDiseaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="207" column="45" selection-start-line="207" selection-start-column="27" selection-end-line="207" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerDashboardActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="82" column="8" lean-forward="true" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/FarmerActivity/FarmerControlMeasuresActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="202" column="13" lean-forward="true" selection-start-line="202" selection-start-column="13" selection-end-line="202" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/AdminActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2575">
-          <caret line="58" column="60" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/duriandiseasedetectionsystem/DashboardActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="136" column="11" lean-forward="true" selection-start-line="136" selection-start-column="11" selection-end-line="136" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#onStart#0;class#ControlMeasuresActivity#0" />
+            <element signature="method#createControlMeasures#0;class#ControlMeasuresActivity#0" />
+            <element signature="method#updateDeleteData#0;class#ControlMeasuresActivity#0" />
           </folding>
         </state>
       </provider>

@@ -385,7 +385,7 @@ public class ControlMeasuresActivity extends AppCompatActivity {
     }
 
     //untuk update data dan show dialog dia
-    public void updateDeleteData() {
+    public void updateDeleteData()  {
 
         AlertDialog.Builder mydialog = new AlertDialog.Builder(ControlMeasuresActivity.this);
         LayoutInflater inflater = LayoutInflater.from(ControlMeasuresActivity.this);

@@ -61,8 +61,6 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private ProgressDialog mDialog;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -246,7 +244,7 @@ public class RegistrationActivity extends AppCompatActivity {
                                     mDialog.dismiss();
                                 }
                             },500);
-                            Toast.makeText(getApplicationContext(),"Upload Successfull", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Upload Successfully", Toast.LENGTH_LONG).show();
 
                             ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
