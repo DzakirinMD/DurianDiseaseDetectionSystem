@@ -7,10 +7,10 @@ android:orientation="vertical"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:gravity="center"
-android:background="@drawable/backgrounddesign"
+android:background="@drawable/mainbg"
 tools:context=".LoginActivity">
 
-<ScrollView
+    <ScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -18,13 +18,20 @@ tools:context=".LoginActivity">
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content">
-
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/a"
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="LOGIN"
+            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:gravity="center"
+            android:textColor="@android:color/black"
             />
 
         <EditText
@@ -65,7 +72,7 @@ tools:context=".LoginActivity">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Don't have an account ? Sign Up here"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/background_dark"
             android:gravity="center"
             android:padding="7dp"
             android:id="@+id/signup_txt"
@@ -75,6 +82,4 @@ tools:context=".LoginActivity">
 
     </LinearLayout>
 </ScrollView>
-
-
 </LinearLayout>

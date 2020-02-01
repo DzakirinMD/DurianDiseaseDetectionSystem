@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/backgrounddesign"
+    android:background="@drawable/durianregister"
     android:gravity="center"
     tools:context=".RegistrationActivity">
 
@@ -23,6 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="REGISTRATION"
+                android:textStyle="bold"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:gravity="center"
                 />
